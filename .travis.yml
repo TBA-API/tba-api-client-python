@@ -12,3 +12,9 @@ python:
 install: "pip install -r requirements.txt"
 # command to run tests
 script: nosetests
+
+deploy:
+  provider: pypi
+  user: tweirtx
+  password:
+    secure: C/x0t50Jnd3TuYQbE7fvpSqFCzTUn/pXSOhq8BpFLfD3KhaupZOkQIwhKeSbx1cBa1Jztr+mcX1VaSZb726SRBsSEb/pH5enF4UAjQ8VakV65VL+LXNyJoK75mDcMG1HA6IQTV27LpGdr/3IELMojs5iirckAmIwXSrJD5uWEsw41IID7TcWIrdxIPEDL2sJP4R/VUEXZk31vQ0wY6E2X2OXbuXkJlWqzikC4G43eOfoL+5WXOABOW2I1Uee1Ma3C6V/ivgFBPML6OdxyzdZcjnObpZguJkaNH101XFBgSDbAunn3qvI87jxf7cvtYx5iX7oo4RoPVagcRjl42W0Zk/lxa0CtqGmwk9kCRTYxfjWBFxKue+OFE9jjUOea7QzhT4PvzLUXLGr+1Dt9GNB2wtIN0be6UqU0+V2U167WnGzJtsyIWI4xG79bvW4d7I6L8dqjWf8pJtk/6GEL/nGmZOHjBebYajbaf43N016L+046rCbDbvitgiXH5+spPB5jJLtP+Wmb+q8LYB8wNXOgGMkz2gLqIRxbwx5Zgy5/0qPC4NmVaqxsauGUGNRQVbIQ3yLIFKjUKUOhQRLu1txf/KbCEWDVdRmQGogiFPOSr7FcHYDDngpe3MBS7PpDk78qcZWoIyeBGHPiqIoJUdnh85Lvh3hDtsh6vU0Dz0rim0=
