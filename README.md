@@ -232,6 +232,8 @@ Class | Method | HTTP request | Description
  - [MatchScoreBreakdown2017Alliance](docs/MatchScoreBreakdown2017Alliance.md)
  - [MatchScoreBreakdown2018](docs/MatchScoreBreakdown2018.md)
  - [MatchScoreBreakdown2018Alliance](docs/MatchScoreBreakdown2018Alliance.md)
+ - [MatchScoreBreakdown2019](docs/MatchScoreBreakdown2019.md)
+ - [MatchScoreBreakdown2019Alliance](docs/MatchScoreBreakdown2019Alliance.md)
  - [MatchSimple](docs/MatchSimple.md)
  - [MatchSimpleAlliances](docs/MatchSimpleAlliances.md)
  - [MatchTimeseries2018](docs/MatchTimeseries2018.md)

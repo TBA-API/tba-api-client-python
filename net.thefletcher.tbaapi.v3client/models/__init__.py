@@ -50,6 +50,8 @@ from net.thefletcher.tbaapi.v3client.models.match_score_breakdown_2017 import Ma
 from net.thefletcher.tbaapi.v3client.models.match_score_breakdown_2017_alliance import MatchScoreBreakdown2017Alliance
 from net.thefletcher.tbaapi.v3client.models.match_score_breakdown_2018 import MatchScoreBreakdown2018
 from net.thefletcher.tbaapi.v3client.models.match_score_breakdown_2018_alliance import MatchScoreBreakdown2018Alliance
+from net.thefletcher.tbaapi.v3client.models.match_score_breakdown_2019 import MatchScoreBreakdown2019
+from net.thefletcher.tbaapi.v3client.models.match_score_breakdown_2019_alliance import MatchScoreBreakdown2019Alliance
 from net.thefletcher.tbaapi.v3client.models.match_simple import MatchSimple
 from net.thefletcher.tbaapi.v3client.models.match_simple_alliances import MatchSimpleAlliances
 from net.thefletcher.tbaapi.v3client.models.match_timeseries_2018 import MatchTimeseries2018
