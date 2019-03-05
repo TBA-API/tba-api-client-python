@@ -143,7 +143,7 @@ class Award(object):
     def recipient_list(self):
         """Gets the recipient_list of this Award.  # noqa: E501
 
-        A list of recipients of the award at the event. Either team_key and/or awardee for individual awards.  # noqa: E501
+        A list of recipients of the award at the event. May have either a team_key or an awardee, both, or neither (in the case the award wasn't awarded at the event).  # noqa: E501
 
         :return: The recipient_list of this Award.  # noqa: E501
         :rtype: list[AwardRecipient]
@@ -154,7 +154,7 @@ class Award(object):
     def recipient_list(self, recipient_list):
         """Sets the recipient_list of this Award.
 
-        A list of recipients of the award at the event. Either team_key and/or awardee for individual awards.  # noqa: E501
+        A list of recipients of the award at the event. May have either a team_key or an awardee, both, or neither (in the case the award wasn't awarded at the event).  # noqa: E501
 
         :param recipient_list: The recipient_list of this Award.  # noqa: E501
         :type: list[AwardRecipient]
