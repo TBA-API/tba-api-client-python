@@ -1,4 +1,4 @@
-# net.thefletcher.tbaapi.v3client.MatchApi
+# tbaapiv3client.MatchApi
 
 All URIs are relative to *https://www.thebluealliance.com/api/v3*
 
@@ -27,21 +27,22 @@ Method | HTTP request | Description
 Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -82,21 +83,22 @@ Name | Type | Description  | Notes
 Gets a list of matches for the given event.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -137,21 +139,22 @@ Name | Type | Description  | Notes
 Gets a list of match keys for the given event.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -192,21 +195,22 @@ Name | Type | Description  | Notes
 Gets a short-form list of matches for the given event.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -247,21 +251,22 @@ Name | Type | Description  | Notes
 Gets a `Match` object for the given match key.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -302,21 +307,22 @@ Name | Type | Description  | Notes
 Gets a short-form `Match` object for the given match key.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -357,21 +363,22 @@ Name | Type | Description  | Notes
 Gets an array of game-specific Match Timeseries objects for the given match key or an empty array if not available. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -412,21 +419,22 @@ Name | Type | Description  | Notes
 Gets a list of matches for the given team and event.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -469,21 +477,22 @@ Name | Type | Description  | Notes
 Gets a list of match keys for matches for the given team and event.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -526,21 +535,22 @@ Name | Type | Description  | Notes
 Gets a short-form list of matches for the given team and event.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -583,21 +593,22 @@ Name | Type | Description  | Notes
 Gets a list of matches for the given team and year.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -640,21 +651,22 @@ Name | Type | Description  | Notes
 Gets a list of match keys for matches for the given team and year.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -697,21 +709,22 @@ Name | Type | Description  | Notes
 Gets a short-form list of matches for the given team and year.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.MatchApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)

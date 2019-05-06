@@ -1,4 +1,4 @@
-# net.thefletcher.tbaapi.v3client.DistrictApi
+# tbaapiv3client.DistrictApi
 
 All URIs are relative to *https://www.thebluealliance.com/api/v3*
 
@@ -24,21 +24,22 @@ Method | HTTP request | Description
 Gets a list of events in the given district.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.DistrictApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.DistrictApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -79,21 +80,22 @@ Name | Type | Description  | Notes
 Gets a list of event keys for events in the given district.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.DistrictApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.DistrictApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -134,21 +136,22 @@ Name | Type | Description  | Notes
 Gets a short-form list of events in the given district.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.DistrictApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.DistrictApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -189,21 +192,22 @@ Name | Type | Description  | Notes
 Gets a list of team district rankings for the given district.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.DistrictApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.DistrictApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -244,21 +248,22 @@ Name | Type | Description  | Notes
 Gets a list of `Team` objects that competed in events in the given district.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.DistrictApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.DistrictApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -299,21 +304,22 @@ Name | Type | Description  | Notes
 Gets a list of `Team` objects that competed in events in the given district.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.DistrictApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.DistrictApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -354,21 +360,22 @@ Name | Type | Description  | Notes
 Gets a short-form list of `Team` objects that competed in events in the given district.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.DistrictApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.DistrictApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -409,21 +416,22 @@ Name | Type | Description  | Notes
 Gets a list of districts and their corresponding district key, for the given year.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.DistrictApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.DistrictApi(tbaapiv3client.ApiClient(configuration))
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -464,21 +472,22 @@ Name | Type | Description  | Notes
 Gets a list of team rankings for the Event.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.DistrictApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.DistrictApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
@@ -519,21 +528,22 @@ Name | Type | Description  | Notes
 Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.
 
 ### Example
+
+* Api Key Authentication (apiKey):
 ```python
 from __future__ import print_function
 import time
-import net.thefletcher.tbaapi.v3client
-from net.thefletcher.tbaapi.v3client.rest import ApiException
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
 from pprint import pprint
-
+configuration = tbaapiv3client.Configuration()
 # Configure API key authorization: apiKey
-configuration = net.thefletcher.tbaapi.v3client.Configuration()
 configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = net.thefletcher.tbaapi.v3client.DistrictApi(net.thefletcher.tbaapi.v3client.ApiClient(configuration))
+api_instance = tbaapiv3client.DistrictApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
