@@ -18,6 +18,10 @@ import re  # noqa: F401
 import six
 
 from tbaapiv3client.api_client import ApiClient
+from tbaapiv3client.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class ListApi(object):
@@ -82,7 +86,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_events" % key
                 )
@@ -91,7 +95,7 @@ class ListApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_events`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_events`")  # noqa: E501
 
         collection_formats = {}
 
@@ -182,7 +186,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_events_keys" % key
                 )
@@ -191,7 +195,7 @@ class ListApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_events_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_events_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -282,7 +286,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_events_simple" % key
                 )
@@ -291,7 +295,7 @@ class ListApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_events_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_events_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -382,7 +386,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_rankings" % key
                 )
@@ -391,7 +395,7 @@ class ListApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_rankings`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_rankings`")  # noqa: E501
 
         collection_formats = {}
 
@@ -482,7 +486,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_teams" % key
                 )
@@ -491,7 +495,7 @@ class ListApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_teams`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams`")  # noqa: E501
 
         collection_formats = {}
 
@@ -582,7 +586,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_teams_keys" % key
                 )
@@ -591,7 +595,7 @@ class ListApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_teams_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -682,7 +686,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_teams_simple" % key
                 )
@@ -691,7 +695,7 @@ class ListApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_teams_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -782,7 +786,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_teams" % key
                 )
@@ -791,7 +795,7 @@ class ListApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_teams`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams`")  # noqa: E501
 
         collection_formats = {}
 
@@ -882,7 +886,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_teams_keys" % key
                 )
@@ -891,7 +895,7 @@ class ListApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_teams_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -982,7 +986,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_teams_simple" % key
                 )
@@ -991,7 +995,7 @@ class ListApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_teams_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1082,7 +1086,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_teams_statuses" % key
                 )
@@ -1091,7 +1095,7 @@ class ListApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_teams_statuses`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams_statuses`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1182,7 +1186,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_events_by_year" % key
                 )
@@ -1191,7 +1195,7 @@ class ListApi(object):
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_events_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_events_by_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1282,7 +1286,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_events_by_year_keys" % key
                 )
@@ -1291,7 +1295,7 @@ class ListApi(object):
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_events_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_events_by_year_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1382,7 +1386,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_events_by_year_simple" % key
                 )
@@ -1391,7 +1395,7 @@ class ListApi(object):
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_events_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_events_by_year_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1484,7 +1488,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_events_statuses_by_year" % key
                 )
@@ -1493,11 +1497,11 @@ class ListApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_events_statuses_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_statuses_by_year`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_events_statuses_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_events_statuses_by_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1590,7 +1594,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams" % key
                 )
@@ -1599,7 +1603,7 @@ class ListApi(object):
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1692,7 +1696,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams_by_year" % key
                 )
@@ -1701,11 +1705,11 @@ class ListApi(object):
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_teams_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_teams_by_year`")  # noqa: E501
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_by_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1800,7 +1804,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams_by_year_keys" % key
                 )
@@ -1809,11 +1813,11 @@ class ListApi(object):
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_teams_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_teams_by_year_keys`")  # noqa: E501
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_by_year_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1908,7 +1912,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams_by_year_simple" % key
                 )
@@ -1917,11 +1921,11 @@ class ListApi(object):
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_teams_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_teams_by_year_simple`")  # noqa: E501
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_by_year_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2014,7 +2018,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams_keys" % key
                 )
@@ -2023,7 +2027,7 @@ class ListApi(object):
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2114,7 +2118,7 @@ class ListApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams_simple" % key
                 )
@@ -2123,7 +2127,7 @@ class ListApi(object):
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_simple`")  # noqa: E501
 
         collection_formats = {}
 

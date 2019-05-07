@@ -96,8 +96,12 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
 
         # Proxy URL
         self.proxy = None
+        # Proxy headers
+        self.proxy_headers = None
         # Safe chars for path_param
         self.safe_chars_for_path_param = ''
+        # Adding retries to override urllib3 default value 3
+        self.retries = None
 
     @property
     def logger_file(self):
@@ -229,7 +233,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 3.04.1\n"\
-               "SDK Package Version: $API_VERSION".\
+               "SDK Package Version: 1.0.0".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):

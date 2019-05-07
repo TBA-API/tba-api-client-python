@@ -18,6 +18,10 @@ import re  # noqa: F401
 import six
 
 from tbaapiv3client.api_client import ApiClient
+from tbaapiv3client.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class TBAApi(object):
@@ -80,7 +84,7 @@ class TBAApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_status" % key
                 )

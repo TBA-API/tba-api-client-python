@@ -18,6 +18,10 @@ import re  # noqa: F401
 import six
 
 from tbaapiv3client.api_client import ApiClient
+from tbaapiv3client.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class MatchApi(object):
@@ -82,7 +86,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_match_timeseries" % key
                 )
@@ -91,7 +95,7 @@ class MatchApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_match_timeseries`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_match_timeseries`")  # noqa: E501
 
         collection_formats = {}
 
@@ -182,7 +186,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_matches" % key
                 )
@@ -191,7 +195,7 @@ class MatchApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_matches`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_matches`")  # noqa: E501
 
         collection_formats = {}
 
@@ -282,7 +286,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_matches_keys" % key
                 )
@@ -291,7 +295,7 @@ class MatchApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_matches_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_matches_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -382,7 +386,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_matches_simple" % key
                 )
@@ -391,7 +395,7 @@ class MatchApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_matches_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_matches_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -482,7 +486,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_match" % key
                 )
@@ -491,7 +495,7 @@ class MatchApi(object):
         # verify the required parameter 'match_key' is set
         if ('match_key' not in local_var_params or
                 local_var_params['match_key'] is None):
-            raise ValueError("Missing the required parameter `match_key` when calling `get_match`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `match_key` when calling `get_match`")  # noqa: E501
 
         collection_formats = {}
 
@@ -582,7 +586,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_match_simple" % key
                 )
@@ -591,7 +595,7 @@ class MatchApi(object):
         # verify the required parameter 'match_key' is set
         if ('match_key' not in local_var_params or
                 local_var_params['match_key'] is None):
-            raise ValueError("Missing the required parameter `match_key` when calling `get_match_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `match_key` when calling `get_match_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -682,7 +686,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_match_timeseries" % key
                 )
@@ -691,7 +695,7 @@ class MatchApi(object):
         # verify the required parameter 'match_key' is set
         if ('match_key' not in local_var_params or
                 local_var_params['match_key'] is None):
-            raise ValueError("Missing the required parameter `match_key` when calling `get_match_timeseries`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `match_key` when calling `get_match_timeseries`")  # noqa: E501
 
         collection_formats = {}
 
@@ -784,7 +788,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_event_matches" % key
                 )
@@ -793,11 +797,11 @@ class MatchApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_event_matches`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_matches`")  # noqa: E501
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_team_event_matches`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_matches`")  # noqa: E501
 
         collection_formats = {}
 
@@ -892,7 +896,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_event_matches_keys" % key
                 )
@@ -901,11 +905,11 @@ class MatchApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_event_matches_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_matches_keys`")  # noqa: E501
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_team_event_matches_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_matches_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1000,7 +1004,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_event_matches_simple" % key
                 )
@@ -1009,11 +1013,11 @@ class MatchApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_event_matches_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_matches_simple`")  # noqa: E501
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_team_event_matches_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_matches_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1108,7 +1112,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_matches_by_year" % key
                 )
@@ -1117,11 +1121,11 @@ class MatchApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_matches_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_matches_by_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1216,7 +1220,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_matches_by_year_keys" % key
                 )
@@ -1225,11 +1229,11 @@ class MatchApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year_keys`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_matches_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_matches_by_year_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1324,7 +1328,7 @@ class MatchApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_matches_by_year_simple" % key
                 )
@@ -1333,11 +1337,11 @@ class MatchApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year_simple`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_matches_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_matches_by_year_simple`")  # noqa: E501
 
         collection_formats = {}
 

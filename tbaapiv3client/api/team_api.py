@@ -18,6 +18,10 @@ import re  # noqa: F401
 import six
 
 from tbaapiv3client.api_client import ApiClient
+from tbaapiv3client.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class TeamApi(object):
@@ -82,7 +86,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_rankings" % key
                 )
@@ -91,7 +95,7 @@ class TeamApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_rankings`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_rankings`")  # noqa: E501
 
         collection_formats = {}
 
@@ -182,7 +186,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_teams" % key
                 )
@@ -191,7 +195,7 @@ class TeamApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_teams`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams`")  # noqa: E501
 
         collection_formats = {}
 
@@ -282,7 +286,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_teams_keys" % key
                 )
@@ -291,7 +295,7 @@ class TeamApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_teams_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -382,7 +386,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_district_teams_simple" % key
                 )
@@ -391,7 +395,7 @@ class TeamApi(object):
         # verify the required parameter 'district_key' is set
         if ('district_key' not in local_var_params or
                 local_var_params['district_key'] is None):
-            raise ValueError("Missing the required parameter `district_key` when calling `get_district_teams_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -482,7 +486,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_teams" % key
                 )
@@ -491,7 +495,7 @@ class TeamApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_teams`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams`")  # noqa: E501
 
         collection_formats = {}
 
@@ -582,7 +586,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_teams_keys" % key
                 )
@@ -591,7 +595,7 @@ class TeamApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_teams_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -682,7 +686,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_teams_simple" % key
                 )
@@ -691,7 +695,7 @@ class TeamApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_teams_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -782,7 +786,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_event_teams_statuses" % key
                 )
@@ -791,7 +795,7 @@ class TeamApi(object):
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_event_teams_statuses`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams_statuses`")  # noqa: E501
 
         collection_formats = {}
 
@@ -882,7 +886,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team" % key
                 )
@@ -891,7 +895,7 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team`")  # noqa: E501
 
         collection_formats = {}
 
@@ -982,7 +986,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_awards" % key
                 )
@@ -991,7 +995,7 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_awards`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_awards`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1084,7 +1088,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_awards_by_year" % key
                 )
@@ -1093,11 +1097,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_awards_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_awards_by_year`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_awards_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_awards_by_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1190,7 +1194,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_districts" % key
                 )
@@ -1199,7 +1203,7 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_districts`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_districts`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1292,7 +1296,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_event_awards" % key
                 )
@@ -1301,11 +1305,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_event_awards`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_awards`")  # noqa: E501
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_team_event_awards`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_awards`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1400,7 +1404,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_event_matches" % key
                 )
@@ -1409,11 +1413,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_event_matches`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_matches`")  # noqa: E501
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_team_event_matches`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_matches`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1508,7 +1512,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_event_matches_keys" % key
                 )
@@ -1517,11 +1521,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_event_matches_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_matches_keys`")  # noqa: E501
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_team_event_matches_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_matches_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1616,7 +1620,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_event_matches_simple" % key
                 )
@@ -1625,11 +1629,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_event_matches_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_matches_simple`")  # noqa: E501
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_team_event_matches_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_matches_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1724,7 +1728,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_event_status" % key
                 )
@@ -1733,11 +1737,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_event_status`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_status`")  # noqa: E501
         # verify the required parameter 'event_key' is set
         if ('event_key' not in local_var_params or
                 local_var_params['event_key'] is None):
-            raise ValueError("Missing the required parameter `event_key` when calling `get_team_event_status`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_status`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1830,7 +1834,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_events" % key
                 )
@@ -1839,7 +1843,7 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_events`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1932,7 +1936,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_events_by_year" % key
                 )
@@ -1941,11 +1945,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_events_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_by_year`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_events_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_events_by_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2040,7 +2044,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_events_by_year_keys" % key
                 )
@@ -2049,11 +2053,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_events_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_by_year_keys`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_events_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_events_by_year_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2148,7 +2152,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_events_by_year_simple" % key
                 )
@@ -2157,11 +2161,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_events_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_by_year_simple`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_events_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_events_by_year_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2254,7 +2258,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_events_keys" % key
                 )
@@ -2263,7 +2267,7 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_events_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2354,7 +2358,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_events_simple" % key
                 )
@@ -2363,7 +2367,7 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_events_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2456,7 +2460,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_events_statuses_by_year" % key
                 )
@@ -2465,11 +2469,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_events_statuses_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_statuses_by_year`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_events_statuses_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_events_statuses_by_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2564,7 +2568,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_matches_by_year" % key
                 )
@@ -2573,11 +2577,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_matches_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_matches_by_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2672,7 +2676,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_matches_by_year_keys" % key
                 )
@@ -2681,11 +2685,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year_keys`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_matches_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_matches_by_year_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2780,7 +2784,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_matches_by_year_simple" % key
                 )
@@ -2789,11 +2793,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year_simple`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_matches_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_matches_by_year_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2888,7 +2892,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_media_by_tag" % key
                 )
@@ -2897,11 +2901,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_media_by_tag`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_media_by_tag`")  # noqa: E501
         # verify the required parameter 'media_tag' is set
         if ('media_tag' not in local_var_params or
                 local_var_params['media_tag'] is None):
-            raise ValueError("Missing the required parameter `media_tag` when calling `get_team_media_by_tag`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `media_tag` when calling `get_team_media_by_tag`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2998,7 +3002,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_media_by_tag_year" % key
                 )
@@ -3007,15 +3011,15 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_media_by_tag_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_media_by_tag_year`")  # noqa: E501
         # verify the required parameter 'media_tag' is set
         if ('media_tag' not in local_var_params or
                 local_var_params['media_tag'] is None):
-            raise ValueError("Missing the required parameter `media_tag` when calling `get_team_media_by_tag_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `media_tag` when calling `get_team_media_by_tag_year`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_media_by_tag_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_media_by_tag_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3112,7 +3116,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_media_by_year" % key
                 )
@@ -3121,11 +3125,11 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_media_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_media_by_year`")  # noqa: E501
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_team_media_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_media_by_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3218,7 +3222,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_robots" % key
                 )
@@ -3227,7 +3231,7 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_robots`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_robots`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3318,7 +3322,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_simple" % key
                 )
@@ -3327,7 +3331,7 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3418,7 +3422,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_social_media" % key
                 )
@@ -3427,7 +3431,7 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_social_media`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_social_media`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3518,7 +3522,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_team_years_participated" % key
                 )
@@ -3527,7 +3531,7 @@ class TeamApi(object):
         # verify the required parameter 'team_key' is set
         if ('team_key' not in local_var_params or
                 local_var_params['team_key'] is None):
-            raise ValueError("Missing the required parameter `team_key` when calling `get_team_years_participated`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_years_participated`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3618,7 +3622,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams" % key
                 )
@@ -3627,7 +3631,7 @@ class TeamApi(object):
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3720,7 +3724,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams_by_year" % key
                 )
@@ -3729,11 +3733,11 @@ class TeamApi(object):
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_teams_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_teams_by_year`")  # noqa: E501
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams_by_year`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_by_year`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3828,7 +3832,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams_by_year_keys" % key
                 )
@@ -3837,11 +3841,11 @@ class TeamApi(object):
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_teams_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_teams_by_year_keys`")  # noqa: E501
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams_by_year_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_by_year_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3936,7 +3940,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams_by_year_simple" % key
                 )
@@ -3945,11 +3949,11 @@ class TeamApi(object):
         # verify the required parameter 'year' is set
         if ('year' not in local_var_params or
                 local_var_params['year'] is None):
-            raise ValueError("Missing the required parameter `year` when calling `get_teams_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `year` when calling `get_teams_by_year_simple`")  # noqa: E501
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams_by_year_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_by_year_simple`")  # noqa: E501
 
         collection_formats = {}
 
@@ -4042,7 +4046,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams_keys" % key
                 )
@@ -4051,7 +4055,7 @@ class TeamApi(object):
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams_keys`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_keys`")  # noqa: E501
 
         collection_formats = {}
 
@@ -4142,7 +4146,7 @@ class TeamApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_teams_simple" % key
                 )
@@ -4151,7 +4155,7 @@ class TeamApi(object):
         # verify the required parameter 'page_num' is set
         if ('page_num' not in local_var_params or
                 local_var_params['page_num'] is None):
-            raise ValueError("Missing the required parameter `page_num` when calling `get_teams_simple`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_simple`")  # noqa: E501
 
         collection_formats = {}
 

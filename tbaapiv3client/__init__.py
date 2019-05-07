@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "$API_VERSION"
+__version__ = "1.0.0"
 
 # import apis into sdk package
 from tbaapiv3client.api.tba_api import TBAApi
@@ -27,6 +27,11 @@ from tbaapiv3client.api.team_api import TeamApi
 # import ApiClient
 from tbaapiv3client.api_client import ApiClient
 from tbaapiv3client.configuration import Configuration
+from tbaapiv3client.exceptions import OpenApiException
+from tbaapiv3client.exceptions import ApiTypeError
+from tbaapiv3client.exceptions import ApiValueError
+from tbaapiv3client.exceptions import ApiKeyError
+from tbaapiv3client.exceptions import ApiException
 # import models into sdk package
 from tbaapiv3client.models.api_status import APIStatus
 from tbaapiv3client.models.api_status_app_version import APIStatusAppVersion
@@ -81,3 +86,4 @@ from tbaapiv3client.models.team_robot import TeamRobot
 from tbaapiv3client.models.team_simple import TeamSimple
 from tbaapiv3client.models.wlt_record import WLTRecord
 from tbaapiv3client.models.webcast import Webcast
+
