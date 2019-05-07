@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "tba-api-v3client"
-VERSION = "3.04.1"
+VERSION = "1.0.0"
 # To install the library, run the following
 #
 # python setup.py install
