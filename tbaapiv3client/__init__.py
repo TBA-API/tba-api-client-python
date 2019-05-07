@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.0.0"
+__version__ = "$API_VERSION"
 
 # import apis into sdk package
 from tbaapiv3client.api.tba_api import TBAApi
