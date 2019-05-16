@@ -35,7 +35,7 @@ class MatchSimple(object):
         'comp_level': 'str',
         'set_number': 'int',
         'match_number': 'int',
-        'alliances': 'MatchSimpleAlliances',
+        'alliances': 'MatchAlliances',
         'winning_alliance': 'str',
         'event_key': 'str',
         'time': 'int',
@@ -199,7 +199,7 @@ class MatchSimple(object):
 
 
         :return: The alliances of this MatchSimple.  # noqa: E501
-        :rtype: MatchSimpleAlliances
+        :rtype: MatchAlliances
         """
         return self._alliances
 
@@ -209,7 +209,7 @@ class MatchSimple(object):
 
 
         :param alliances: The alliances of this MatchSimple.  # noqa: E501
-        :type: MatchSimpleAlliances
+        :type: MatchAlliances
         """
 
         self._alliances = alliances
