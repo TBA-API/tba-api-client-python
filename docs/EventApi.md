@@ -42,7 +42,7 @@ Method | HTTP request | Description
 
 
 # **get_district_events**
-> list[Event] get_district_events()
+> list[Event] get_district_events(district_key, if_modified_since=if_modified_since)
 
 
 
@@ -65,16 +65,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_district_events()
+    api_response = api_instance.get_district_events(district_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_district_events: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **district_key** | **str**| TBA District Key, eg &#x60;2016fim&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -92,7 +98,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_district_events_keys**
-> list[str] get_district_events_keys()
+> list[str] get_district_events_keys(district_key, if_modified_since=if_modified_since)
 
 
 
@@ -115,16 +121,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_district_events_keys()
+    api_response = api_instance.get_district_events_keys(district_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_district_events_keys: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **district_key** | **str**| TBA District Key, eg &#x60;2016fim&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -142,7 +154,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_district_events_simple**
-> list[EventSimple] get_district_events_simple(district_key)
+> list[EventSimple] get_district_events_simple(district_key, if_modified_since=if_modified_since)
 
 
 
@@ -166,9 +178,10 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_district_events_simple(district_key)
+    api_response = api_instance.get_district_events_simple(district_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_district_events_simple: %s\n" % e)
@@ -179,6 +192,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **district_key** | **str**| TBA District Key, eg &#x60;2016fim&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -196,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event**
-> Event get_event()
+> Event get_event(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -219,16 +233,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event()
+    api_response = api_instance.get_event(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -246,7 +266,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_alliances**
-> list[EliminationAlliance] get_event_alliances()
+> list[EliminationAlliance] get_event_alliances(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -269,16 +289,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_alliances()
+    api_response = api_instance.get_event_alliances(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_alliances: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -296,7 +322,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_awards**
-> list[Award] get_event_awards()
+> list[Award] get_event_awards(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -319,16 +345,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_awards()
+    api_response = api_instance.get_event_awards(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_awards: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -346,7 +378,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_district_points**
-> EventDistrictPoints get_event_district_points()
+> EventDistrictPoints get_event_district_points(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -369,16 +401,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_district_points()
+    api_response = api_instance.get_event_district_points(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_district_points: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -396,7 +434,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_insights**
-> EventInsights get_event_insights()
+> EventInsights get_event_insights(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -419,16 +457,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_insights()
+    api_response = api_instance.get_event_insights(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_insights: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -446,7 +490,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_match_timeseries**
-> list[str] get_event_match_timeseries()
+> list[str] get_event_match_timeseries(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -469,16 +513,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_match_timeseries()
+    api_response = api_instance.get_event_match_timeseries(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_match_timeseries: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -496,7 +546,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_matches**
-> list[Match] get_event_matches()
+> list[Match] get_event_matches(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -519,16 +569,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_matches()
+    api_response = api_instance.get_event_matches(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_matches: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -546,7 +602,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_matches_keys**
-> list[str] get_event_matches_keys()
+> list[str] get_event_matches_keys(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -569,16 +625,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_matches_keys()
+    api_response = api_instance.get_event_matches_keys(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_matches_keys: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -596,7 +658,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_matches_simple**
-> list[MatchSimple] get_event_matches_simple()
+> list[MatchSimple] get_event_matches_simple(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -619,16 +681,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_matches_simple()
+    api_response = api_instance.get_event_matches_simple(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_matches_simple: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -646,7 +714,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_op_rs**
-> EventOPRs get_event_op_rs()
+> EventOPRs get_event_op_rs(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -669,16 +737,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_op_rs()
+    api_response = api_instance.get_event_op_rs(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_op_rs: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -696,7 +770,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_predictions**
-> object get_event_predictions()
+> object get_event_predictions(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -719,16 +793,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_predictions()
+    api_response = api_instance.get_event_predictions(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_predictions: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -746,7 +826,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_rankings**
-> EventRanking get_event_rankings()
+> EventRanking get_event_rankings(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -769,16 +849,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_rankings()
+    api_response = api_instance.get_event_rankings(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_rankings: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -796,7 +882,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_simple**
-> EventSimple get_event_simple()
+> EventSimple get_event_simple(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -819,16 +905,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_simple()
+    api_response = api_instance.get_event_simple(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_simple: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -846,7 +938,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_teams**
-> list[Team] get_event_teams()
+> list[Team] get_event_teams(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -869,16 +961,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_teams()
+    api_response = api_instance.get_event_teams(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_teams: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -896,7 +994,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_teams_keys**
-> list[str] get_event_teams_keys()
+> list[str] get_event_teams_keys(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -919,16 +1017,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_teams_keys()
+    api_response = api_instance.get_event_teams_keys(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_teams_keys: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -946,7 +1050,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_teams_simple**
-> list[TeamSimple] get_event_teams_simple()
+> list[TeamSimple] get_event_teams_simple(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -969,16 +1073,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_teams_simple()
+    api_response = api_instance.get_event_teams_simple(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_teams_simple: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -996,7 +1106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_teams_statuses**
-> dict(str, TeamEventStatus) get_event_teams_statuses()
+> dict(str, TeamEventStatus) get_event_teams_statuses(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -1019,16 +1129,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_teams_statuses()
+    api_response = api_instance.get_event_teams_statuses(event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_event_teams_statuses: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1046,7 +1162,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_events_by_year**
-> list[Event] get_events_by_year()
+> list[Event] get_events_by_year(year, if_modified_since=if_modified_since)
 
 
 
@@ -1069,16 +1185,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_events_by_year()
+    api_response = api_instance.get_events_by_year(year, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_events_by_year: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1096,7 +1218,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_events_by_year_keys**
-> list[str] get_events_by_year_keys()
+> list[str] get_events_by_year_keys(year, if_modified_since=if_modified_since)
 
 
 
@@ -1119,16 +1241,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_events_by_year_keys()
+    api_response = api_instance.get_events_by_year_keys(year, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_events_by_year_keys: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1146,7 +1274,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_events_by_year_simple**
-> list[EventSimple] get_events_by_year_simple()
+> list[EventSimple] get_events_by_year_simple(year, if_modified_since=if_modified_since)
 
 
 
@@ -1169,16 +1297,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_events_by_year_simple()
+    api_response = api_instance.get_events_by_year_simple(year, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_events_by_year_simple: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1196,7 +1330,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_event_awards**
-> list[Award] get_team_event_awards()
+> list[Award] get_team_event_awards(team_key, event_key, if_modified_since=if_modified_since)
 
 
 
@@ -1219,16 +1353,24 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_event_awards()
+    api_response = api_instance.get_team_event_awards(team_key, event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_event_awards: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1246,7 +1388,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_event_matches**
-> list[Match] get_team_event_matches()
+> list[Match] get_team_event_matches(team_key, event_key, if_modified_since=if_modified_since)
 
 
 
@@ -1269,16 +1411,24 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_event_matches()
+    api_response = api_instance.get_team_event_matches(team_key, event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_event_matches: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1296,7 +1446,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_event_matches_keys**
-> list[str] get_team_event_matches_keys()
+> list[str] get_team_event_matches_keys(team_key, event_key, if_modified_since=if_modified_since)
 
 
 
@@ -1319,16 +1469,24 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_event_matches_keys()
+    api_response = api_instance.get_team_event_matches_keys(team_key, event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_event_matches_keys: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1346,7 +1504,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_event_matches_simple**
-> list[Match] get_team_event_matches_simple()
+> list[Match] get_team_event_matches_simple(team_key, event_key, if_modified_since=if_modified_since)
 
 
 
@@ -1369,16 +1527,24 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_event_matches_simple()
+    api_response = api_instance.get_team_event_matches_simple(team_key, event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_event_matches_simple: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1396,7 +1562,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_event_status**
-> TeamEventStatus get_team_event_status()
+> TeamEventStatus get_team_event_status(team_key, event_key, if_modified_since=if_modified_since)
 
 
 
@@ -1419,16 +1585,24 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_event_status()
+    api_response = api_instance.get_team_event_status(team_key, event_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_event_status: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1446,7 +1620,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_events**
-> list[Event] get_team_events()
+> list[Event] get_team_events(team_key, if_modified_since=if_modified_since)
 
 
 
@@ -1469,16 +1643,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_events()
+    api_response = api_instance.get_team_events(team_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_events: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1496,7 +1676,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_events_by_year**
-> list[Event] get_team_events_by_year()
+> list[Event] get_team_events_by_year(team_key, year, if_modified_since=if_modified_since)
 
 
 
@@ -1519,16 +1699,24 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_events_by_year()
+    api_response = api_instance.get_team_events_by_year(team_key, year, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_events_by_year: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1546,7 +1734,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_events_by_year_keys**
-> list[str] get_team_events_by_year_keys()
+> list[str] get_team_events_by_year_keys(team_key, year, if_modified_since=if_modified_since)
 
 
 
@@ -1569,16 +1757,24 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_events_by_year_keys()
+    api_response = api_instance.get_team_events_by_year_keys(team_key, year, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_events_by_year_keys: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1596,7 +1792,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_events_by_year_simple**
-> list[EventSimple] get_team_events_by_year_simple()
+> list[EventSimple] get_team_events_by_year_simple(team_key, year, if_modified_since=if_modified_since)
 
 
 
@@ -1619,16 +1815,24 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_events_by_year_simple()
+    api_response = api_instance.get_team_events_by_year_simple(team_key, year, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_events_by_year_simple: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1646,7 +1850,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_events_keys**
-> list[str] get_team_events_keys()
+> list[str] get_team_events_keys(team_key, if_modified_since=if_modified_since)
 
 
 
@@ -1669,16 +1873,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_events_keys()
+    api_response = api_instance.get_team_events_keys(team_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_events_keys: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1696,7 +1906,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_events_simple**
-> list[EventSimple] get_team_events_simple()
+> list[EventSimple] get_team_events_simple(team_key, if_modified_since=if_modified_since)
 
 
 
@@ -1719,16 +1929,22 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_events_simple()
+    api_response = api_instance.get_team_events_simple(team_key, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_events_simple: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1746,7 +1962,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_events_statuses_by_year**
-> dict(str, TeamEventStatus) get_team_events_statuses_by_year()
+> dict(str, TeamEventStatus) get_team_events_statuses_by_year(team_key, year, if_modified_since=if_modified_since)
 
 
 
@@ -1769,16 +1985,24 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_events_statuses_by_year()
+    api_response = api_instance.get_team_events_statuses_by_year(team_key, year, if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EventApi->get_team_events_statuses_by_year: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 

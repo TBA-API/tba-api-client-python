@@ -36,37 +36,41 @@ class DistrictApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def get_district_events(self, **kwargs):  # noqa: E501
+    def get_district_events(self, district_key, **kwargs):  # noqa: E501
         """get_district_events  # noqa: E501
 
         Gets a list of events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_events(async_req=True)
+        >>> thread = api.get_district_events(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Event]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_district_events_with_http_info(**kwargs)  # noqa: E501
+            return self.get_district_events_with_http_info(district_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_district_events_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_district_events_with_http_info(district_key, **kwargs)  # noqa: E501
             return data
 
-    def get_district_events_with_http_info(self, **kwargs):  # noqa: E501
+    def get_district_events_with_http_info(self, district_key, **kwargs):  # noqa: E501
         """get_district_events  # noqa: E501
 
         Gets a list of events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_events_with_http_info(async_req=True)
+        >>> thread = api.get_district_events_with_http_info(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Event]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -74,7 +78,7 @@ class DistrictApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -88,14 +92,22 @@ class DistrictApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'district_key' is set
+        if ('district_key' not in local_var_params or
+                local_var_params['district_key'] is None):
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_events`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'district_key' in local_var_params:
+            path_params['district_key'] = local_var_params['district_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -124,37 +136,41 @@ class DistrictApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_district_events_keys(self, **kwargs):  # noqa: E501
+    def get_district_events_keys(self, district_key, **kwargs):  # noqa: E501
         """get_district_events_keys  # noqa: E501
 
         Gets a list of event keys for events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_events_keys(async_req=True)
+        >>> thread = api.get_district_events_keys(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_district_events_keys_with_http_info(**kwargs)  # noqa: E501
+            return self.get_district_events_keys_with_http_info(district_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_district_events_keys_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_district_events_keys_with_http_info(district_key, **kwargs)  # noqa: E501
             return data
 
-    def get_district_events_keys_with_http_info(self, **kwargs):  # noqa: E501
+    def get_district_events_keys_with_http_info(self, district_key, **kwargs):  # noqa: E501
         """get_district_events_keys  # noqa: E501
 
         Gets a list of event keys for events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_events_keys_with_http_info(async_req=True)
+        >>> thread = api.get_district_events_keys_with_http_info(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -162,7 +178,7 @@ class DistrictApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -176,14 +192,22 @@ class DistrictApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'district_key' is set
+        if ('district_key' not in local_var_params or
+                local_var_params['district_key'] is None):
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_events_keys`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'district_key' in local_var_params:
+            path_params['district_key'] = local_var_params['district_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -223,6 +247,7 @@ class DistrictApi(object):
 
         :param async_req bool
         :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[EventSimple]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -245,6 +270,7 @@ class DistrictApi(object):
 
         :param async_req bool
         :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[EventSimple]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -252,7 +278,7 @@ class DistrictApi(object):
 
         local_var_params = locals()
 
-        all_params = ['district_key']  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -280,6 +306,8 @@ class DistrictApi(object):
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -308,37 +336,41 @@ class DistrictApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_district_rankings(self, **kwargs):  # noqa: E501
+    def get_district_rankings(self, district_key, **kwargs):  # noqa: E501
         """get_district_rankings  # noqa: E501
 
         Gets a list of team district rankings for the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_rankings(async_req=True)
+        >>> thread = api.get_district_rankings(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[DistrictRanking]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_district_rankings_with_http_info(**kwargs)  # noqa: E501
+            return self.get_district_rankings_with_http_info(district_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_district_rankings_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_district_rankings_with_http_info(district_key, **kwargs)  # noqa: E501
             return data
 
-    def get_district_rankings_with_http_info(self, **kwargs):  # noqa: E501
+    def get_district_rankings_with_http_info(self, district_key, **kwargs):  # noqa: E501
         """get_district_rankings  # noqa: E501
 
         Gets a list of team district rankings for the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_rankings_with_http_info(async_req=True)
+        >>> thread = api.get_district_rankings_with_http_info(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[DistrictRanking]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -346,7 +378,7 @@ class DistrictApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -360,14 +392,22 @@ class DistrictApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'district_key' is set
+        if ('district_key' not in local_var_params or
+                local_var_params['district_key'] is None):
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_rankings`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'district_key' in local_var_params:
+            path_params['district_key'] = local_var_params['district_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -396,37 +436,41 @@ class DistrictApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_district_teams(self, **kwargs):  # noqa: E501
+    def get_district_teams(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams  # noqa: E501
 
         Gets a list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams(async_req=True)
+        >>> thread = api.get_district_teams(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Team]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_district_teams_with_http_info(**kwargs)  # noqa: E501
+            return self.get_district_teams_with_http_info(district_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_district_teams_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_district_teams_with_http_info(district_key, **kwargs)  # noqa: E501
             return data
 
-    def get_district_teams_with_http_info(self, **kwargs):  # noqa: E501
+    def get_district_teams_with_http_info(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams  # noqa: E501
 
         Gets a list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams_with_http_info(async_req=True)
+        >>> thread = api.get_district_teams_with_http_info(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Team]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -434,7 +478,7 @@ class DistrictApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -448,14 +492,22 @@ class DistrictApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'district_key' is set
+        if ('district_key' not in local_var_params or
+                local_var_params['district_key'] is None):
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'district_key' in local_var_params:
+            path_params['district_key'] = local_var_params['district_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -484,37 +536,41 @@ class DistrictApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_district_teams_keys(self, **kwargs):  # noqa: E501
+    def get_district_teams_keys(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams_keys  # noqa: E501
 
         Gets a list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams_keys(async_req=True)
+        >>> thread = api.get_district_teams_keys(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_district_teams_keys_with_http_info(**kwargs)  # noqa: E501
+            return self.get_district_teams_keys_with_http_info(district_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_district_teams_keys_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_district_teams_keys_with_http_info(district_key, **kwargs)  # noqa: E501
             return data
 
-    def get_district_teams_keys_with_http_info(self, **kwargs):  # noqa: E501
+    def get_district_teams_keys_with_http_info(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams_keys  # noqa: E501
 
         Gets a list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams_keys_with_http_info(async_req=True)
+        >>> thread = api.get_district_teams_keys_with_http_info(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -522,7 +578,7 @@ class DistrictApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -536,14 +592,22 @@ class DistrictApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'district_key' is set
+        if ('district_key' not in local_var_params or
+                local_var_params['district_key'] is None):
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams_keys`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'district_key' in local_var_params:
+            path_params['district_key'] = local_var_params['district_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -572,37 +636,41 @@ class DistrictApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_district_teams_simple(self, **kwargs):  # noqa: E501
+    def get_district_teams_simple(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams_simple  # noqa: E501
 
         Gets a short-form list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams_simple(async_req=True)
+        >>> thread = api.get_district_teams_simple(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamSimple]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_district_teams_simple_with_http_info(**kwargs)  # noqa: E501
+            return self.get_district_teams_simple_with_http_info(district_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_district_teams_simple_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_district_teams_simple_with_http_info(district_key, **kwargs)  # noqa: E501
             return data
 
-    def get_district_teams_simple_with_http_info(self, **kwargs):  # noqa: E501
+    def get_district_teams_simple_with_http_info(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams_simple  # noqa: E501
 
         Gets a short-form list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams_simple_with_http_info(async_req=True)
+        >>> thread = api.get_district_teams_simple_with_http_info(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamSimple]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -610,7 +678,7 @@ class DistrictApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -624,14 +692,22 @@ class DistrictApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'district_key' is set
+        if ('district_key' not in local_var_params or
+                local_var_params['district_key'] is None):
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams_simple`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'district_key' in local_var_params:
+            path_params['district_key'] = local_var_params['district_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -660,37 +736,41 @@ class DistrictApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_districts_by_year(self, **kwargs):  # noqa: E501
+    def get_districts_by_year(self, year, **kwargs):  # noqa: E501
         """get_districts_by_year  # noqa: E501
 
         Gets a list of districts and their corresponding district key, for the given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_districts_by_year(async_req=True)
+        >>> thread = api.get_districts_by_year(year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[DistrictList]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_districts_by_year_with_http_info(**kwargs)  # noqa: E501
+            return self.get_districts_by_year_with_http_info(year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_districts_by_year_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_districts_by_year_with_http_info(year, **kwargs)  # noqa: E501
             return data
 
-    def get_districts_by_year_with_http_info(self, **kwargs):  # noqa: E501
+    def get_districts_by_year_with_http_info(self, year, **kwargs):  # noqa: E501
         """get_districts_by_year  # noqa: E501
 
         Gets a list of districts and their corresponding district key, for the given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_districts_by_year_with_http_info(async_req=True)
+        >>> thread = api.get_districts_by_year_with_http_info(year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[DistrictList]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -698,7 +778,7 @@ class DistrictApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -712,14 +792,22 @@ class DistrictApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_districts_by_year`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -748,37 +836,41 @@ class DistrictApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_event_district_points(self, **kwargs):  # noqa: E501
+    def get_event_district_points(self, event_key, **kwargs):  # noqa: E501
         """get_event_district_points  # noqa: E501
 
         Gets a list of team rankings for the Event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_event_district_points(async_req=True)
+        >>> thread = api.get_event_district_points(event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: EventDistrictPoints
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_event_district_points_with_http_info(**kwargs)  # noqa: E501
+            return self.get_event_district_points_with_http_info(event_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_event_district_points_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_event_district_points_with_http_info(event_key, **kwargs)  # noqa: E501
             return data
 
-    def get_event_district_points_with_http_info(self, **kwargs):  # noqa: E501
+    def get_event_district_points_with_http_info(self, event_key, **kwargs):  # noqa: E501
         """get_event_district_points  # noqa: E501
 
         Gets a list of team rankings for the Event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_event_district_points_with_http_info(async_req=True)
+        >>> thread = api.get_event_district_points_with_http_info(event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: EventDistrictPoints
                  If the method is called asynchronously,
                  returns the request thread.
@@ -786,7 +878,7 @@ class DistrictApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['event_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -800,14 +892,22 @@ class DistrictApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'event_key' is set
+        if ('event_key' not in local_var_params or
+                local_var_params['event_key'] is None):
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_district_points`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'event_key' in local_var_params:
+            path_params['event_key'] = local_var_params['event_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -836,37 +936,41 @@ class DistrictApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_districts(self, **kwargs):  # noqa: E501
+    def get_team_districts(self, team_key, **kwargs):  # noqa: E501
         """get_team_districts  # noqa: E501
 
         Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_districts(async_req=True)
+        >>> thread = api.get_team_districts(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[DistrictList]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_districts_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_districts_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_districts_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_districts_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_districts_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_districts_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team_districts  # noqa: E501
 
         Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_districts_with_http_info(async_req=True)
+        >>> thread = api.get_team_districts_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[DistrictList]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -874,7 +978,7 @@ class DistrictApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -888,14 +992,22 @@ class DistrictApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_districts`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}

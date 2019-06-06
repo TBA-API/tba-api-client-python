@@ -36,37 +36,41 @@ class TeamApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def get_district_rankings(self, **kwargs):  # noqa: E501
+    def get_district_rankings(self, district_key, **kwargs):  # noqa: E501
         """get_district_rankings  # noqa: E501
 
         Gets a list of team district rankings for the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_rankings(async_req=True)
+        >>> thread = api.get_district_rankings(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[DistrictRanking]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_district_rankings_with_http_info(**kwargs)  # noqa: E501
+            return self.get_district_rankings_with_http_info(district_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_district_rankings_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_district_rankings_with_http_info(district_key, **kwargs)  # noqa: E501
             return data
 
-    def get_district_rankings_with_http_info(self, **kwargs):  # noqa: E501
+    def get_district_rankings_with_http_info(self, district_key, **kwargs):  # noqa: E501
         """get_district_rankings  # noqa: E501
 
         Gets a list of team district rankings for the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_rankings_with_http_info(async_req=True)
+        >>> thread = api.get_district_rankings_with_http_info(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[DistrictRanking]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -74,7 +78,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -88,14 +92,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'district_key' is set
+        if ('district_key' not in local_var_params or
+                local_var_params['district_key'] is None):
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_rankings`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'district_key' in local_var_params:
+            path_params['district_key'] = local_var_params['district_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -124,37 +136,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_district_teams(self, **kwargs):  # noqa: E501
+    def get_district_teams(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams  # noqa: E501
 
         Gets a list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams(async_req=True)
+        >>> thread = api.get_district_teams(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Team]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_district_teams_with_http_info(**kwargs)  # noqa: E501
+            return self.get_district_teams_with_http_info(district_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_district_teams_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_district_teams_with_http_info(district_key, **kwargs)  # noqa: E501
             return data
 
-    def get_district_teams_with_http_info(self, **kwargs):  # noqa: E501
+    def get_district_teams_with_http_info(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams  # noqa: E501
 
         Gets a list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams_with_http_info(async_req=True)
+        >>> thread = api.get_district_teams_with_http_info(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Team]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -162,7 +178,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -176,14 +192,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'district_key' is set
+        if ('district_key' not in local_var_params or
+                local_var_params['district_key'] is None):
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'district_key' in local_var_params:
+            path_params['district_key'] = local_var_params['district_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -212,37 +236,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_district_teams_keys(self, **kwargs):  # noqa: E501
+    def get_district_teams_keys(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams_keys  # noqa: E501
 
         Gets a list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams_keys(async_req=True)
+        >>> thread = api.get_district_teams_keys(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_district_teams_keys_with_http_info(**kwargs)  # noqa: E501
+            return self.get_district_teams_keys_with_http_info(district_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_district_teams_keys_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_district_teams_keys_with_http_info(district_key, **kwargs)  # noqa: E501
             return data
 
-    def get_district_teams_keys_with_http_info(self, **kwargs):  # noqa: E501
+    def get_district_teams_keys_with_http_info(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams_keys  # noqa: E501
 
         Gets a list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams_keys_with_http_info(async_req=True)
+        >>> thread = api.get_district_teams_keys_with_http_info(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -250,7 +278,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -264,14 +292,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'district_key' is set
+        if ('district_key' not in local_var_params or
+                local_var_params['district_key'] is None):
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams_keys`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'district_key' in local_var_params:
+            path_params['district_key'] = local_var_params['district_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -300,37 +336,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_district_teams_simple(self, **kwargs):  # noqa: E501
+    def get_district_teams_simple(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams_simple  # noqa: E501
 
         Gets a short-form list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams_simple(async_req=True)
+        >>> thread = api.get_district_teams_simple(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamSimple]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_district_teams_simple_with_http_info(**kwargs)  # noqa: E501
+            return self.get_district_teams_simple_with_http_info(district_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_district_teams_simple_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_district_teams_simple_with_http_info(district_key, **kwargs)  # noqa: E501
             return data
 
-    def get_district_teams_simple_with_http_info(self, **kwargs):  # noqa: E501
+    def get_district_teams_simple_with_http_info(self, district_key, **kwargs):  # noqa: E501
         """get_district_teams_simple  # noqa: E501
 
         Gets a short-form list of `Team` objects that competed in events in the given district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_district_teams_simple_with_http_info(async_req=True)
+        >>> thread = api.get_district_teams_simple_with_http_info(district_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str district_key: TBA District Key, eg `2016fim` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamSimple]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -338,7 +378,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['district_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -352,14 +392,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'district_key' is set
+        if ('district_key' not in local_var_params or
+                local_var_params['district_key'] is None):
+            raise ApiValueError("Missing the required parameter `district_key` when calling `get_district_teams_simple`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'district_key' in local_var_params:
+            path_params['district_key'] = local_var_params['district_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -388,37 +436,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_event_teams(self, **kwargs):  # noqa: E501
+    def get_event_teams(self, event_key, **kwargs):  # noqa: E501
         """get_event_teams  # noqa: E501
 
         Gets a list of `Team` objects that competed in the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_event_teams(async_req=True)
+        >>> thread = api.get_event_teams(event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Team]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_event_teams_with_http_info(**kwargs)  # noqa: E501
+            return self.get_event_teams_with_http_info(event_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_event_teams_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_event_teams_with_http_info(event_key, **kwargs)  # noqa: E501
             return data
 
-    def get_event_teams_with_http_info(self, **kwargs):  # noqa: E501
+    def get_event_teams_with_http_info(self, event_key, **kwargs):  # noqa: E501
         """get_event_teams  # noqa: E501
 
         Gets a list of `Team` objects that competed in the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_event_teams_with_http_info(async_req=True)
+        >>> thread = api.get_event_teams_with_http_info(event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Team]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -426,7 +478,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['event_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -440,14 +492,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'event_key' is set
+        if ('event_key' not in local_var_params or
+                local_var_params['event_key'] is None):
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'event_key' in local_var_params:
+            path_params['event_key'] = local_var_params['event_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -476,37 +536,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_event_teams_keys(self, **kwargs):  # noqa: E501
+    def get_event_teams_keys(self, event_key, **kwargs):  # noqa: E501
         """get_event_teams_keys  # noqa: E501
 
         Gets a list of `Team` keys that competed in the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_event_teams_keys(async_req=True)
+        >>> thread = api.get_event_teams_keys(event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_event_teams_keys_with_http_info(**kwargs)  # noqa: E501
+            return self.get_event_teams_keys_with_http_info(event_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_event_teams_keys_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_event_teams_keys_with_http_info(event_key, **kwargs)  # noqa: E501
             return data
 
-    def get_event_teams_keys_with_http_info(self, **kwargs):  # noqa: E501
+    def get_event_teams_keys_with_http_info(self, event_key, **kwargs):  # noqa: E501
         """get_event_teams_keys  # noqa: E501
 
         Gets a list of `Team` keys that competed in the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_event_teams_keys_with_http_info(async_req=True)
+        >>> thread = api.get_event_teams_keys_with_http_info(event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -514,7 +578,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['event_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -528,14 +592,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'event_key' is set
+        if ('event_key' not in local_var_params or
+                local_var_params['event_key'] is None):
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams_keys`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'event_key' in local_var_params:
+            path_params['event_key'] = local_var_params['event_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -564,37 +636,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_event_teams_simple(self, **kwargs):  # noqa: E501
+    def get_event_teams_simple(self, event_key, **kwargs):  # noqa: E501
         """get_event_teams_simple  # noqa: E501
 
         Gets a short-form list of `Team` objects that competed in the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_event_teams_simple(async_req=True)
+        >>> thread = api.get_event_teams_simple(event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamSimple]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_event_teams_simple_with_http_info(**kwargs)  # noqa: E501
+            return self.get_event_teams_simple_with_http_info(event_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_event_teams_simple_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_event_teams_simple_with_http_info(event_key, **kwargs)  # noqa: E501
             return data
 
-    def get_event_teams_simple_with_http_info(self, **kwargs):  # noqa: E501
+    def get_event_teams_simple_with_http_info(self, event_key, **kwargs):  # noqa: E501
         """get_event_teams_simple  # noqa: E501
 
         Gets a short-form list of `Team` objects that competed in the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_event_teams_simple_with_http_info(async_req=True)
+        >>> thread = api.get_event_teams_simple_with_http_info(event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamSimple]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -602,7 +678,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['event_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -616,14 +692,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'event_key' is set
+        if ('event_key' not in local_var_params or
+                local_var_params['event_key'] is None):
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams_simple`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'event_key' in local_var_params:
+            path_params['event_key'] = local_var_params['event_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -652,37 +736,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_event_teams_statuses(self, **kwargs):  # noqa: E501
+    def get_event_teams_statuses(self, event_key, **kwargs):  # noqa: E501
         """get_event_teams_statuses  # noqa: E501
 
         Gets a key-value list of the event statuses for teams competing at the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_event_teams_statuses(async_req=True)
+        >>> thread = api.get_event_teams_statuses(event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: dict(str, TeamEventStatus)
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_event_teams_statuses_with_http_info(**kwargs)  # noqa: E501
+            return self.get_event_teams_statuses_with_http_info(event_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_event_teams_statuses_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_event_teams_statuses_with_http_info(event_key, **kwargs)  # noqa: E501
             return data
 
-    def get_event_teams_statuses_with_http_info(self, **kwargs):  # noqa: E501
+    def get_event_teams_statuses_with_http_info(self, event_key, **kwargs):  # noqa: E501
         """get_event_teams_statuses  # noqa: E501
 
         Gets a key-value list of the event statuses for teams competing at the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_event_teams_statuses_with_http_info(async_req=True)
+        >>> thread = api.get_event_teams_statuses_with_http_info(event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: dict(str, TeamEventStatus)
                  If the method is called asynchronously,
                  returns the request thread.
@@ -690,7 +778,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['event_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -704,14 +792,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'event_key' is set
+        if ('event_key' not in local_var_params or
+                local_var_params['event_key'] is None):
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_event_teams_statuses`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'event_key' in local_var_params:
+            path_params['event_key'] = local_var_params['event_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -740,37 +836,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team(self, **kwargs):  # noqa: E501
+    def get_team(self, team_key, **kwargs):  # noqa: E501
         """get_team  # noqa: E501
 
         Gets a `Team` object for the team referenced by the given key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team(async_req=True)
+        >>> thread = api.get_team(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: Team
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team  # noqa: E501
 
         Gets a `Team` object for the team referenced by the given key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_with_http_info(async_req=True)
+        >>> thread = api.get_team_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: Team
                  If the method is called asynchronously,
                  returns the request thread.
@@ -778,7 +878,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -792,14 +892,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -828,37 +936,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_awards(self, **kwargs):  # noqa: E501
+    def get_team_awards(self, team_key, **kwargs):  # noqa: E501
         """get_team_awards  # noqa: E501
 
         Gets a list of awards the given team has won.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_awards(async_req=True)
+        >>> thread = api.get_team_awards(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Award]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_awards_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_awards_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_awards_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_awards_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_awards_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_awards_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team_awards  # noqa: E501
 
         Gets a list of awards the given team has won.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_awards_with_http_info(async_req=True)
+        >>> thread = api.get_team_awards_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Award]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -866,7 +978,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -880,14 +992,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_awards`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -916,37 +1036,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_awards_by_year(self, **kwargs):  # noqa: E501
+    def get_team_awards_by_year(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_awards_by_year  # noqa: E501
 
         Gets a list of awards the given team has won in a given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_awards_by_year(async_req=True)
+        >>> thread = api.get_team_awards_by_year(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Award]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_awards_by_year_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_awards_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_awards_by_year_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_awards_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
             return data
 
-    def get_team_awards_by_year_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_awards_by_year_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_awards_by_year  # noqa: E501
 
         Gets a list of awards the given team has won in a given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_awards_by_year_with_http_info(async_req=True)
+        >>> thread = api.get_team_awards_by_year_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Award]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -954,7 +1080,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -968,14 +1094,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_awards_by_year`")  # noqa: E501
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_awards_by_year`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1004,37 +1144,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_districts(self, **kwargs):  # noqa: E501
+    def get_team_districts(self, team_key, **kwargs):  # noqa: E501
         """get_team_districts  # noqa: E501
 
         Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_districts(async_req=True)
+        >>> thread = api.get_team_districts(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[DistrictList]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_districts_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_districts_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_districts_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_districts_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_districts_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_districts_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team_districts  # noqa: E501
 
         Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_districts_with_http_info(async_req=True)
+        >>> thread = api.get_team_districts_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[DistrictList]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1042,7 +1186,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1056,14 +1200,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_districts`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1092,37 +1244,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_event_awards(self, **kwargs):  # noqa: E501
+    def get_team_event_awards(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_awards  # noqa: E501
 
         Gets a list of awards the given team won at the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_event_awards(async_req=True)
+        >>> thread = api.get_team_event_awards(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Award]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_event_awards_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_event_awards_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_event_awards_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_event_awards_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_event_awards_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_event_awards_with_http_info(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_awards  # noqa: E501
 
         Gets a list of awards the given team won at the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_event_awards_with_http_info(async_req=True)
+        >>> thread = api.get_team_event_awards_with_http_info(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Award]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1130,7 +1288,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'event_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1144,14 +1302,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_awards`")  # noqa: E501
+        # verify the required parameter 'event_key' is set
+        if ('event_key' not in local_var_params or
+                local_var_params['event_key'] is None):
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_awards`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'event_key' in local_var_params:
+            path_params['event_key'] = local_var_params['event_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1180,37 +1352,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_event_matches(self, **kwargs):  # noqa: E501
+    def get_team_event_matches(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_matches  # noqa: E501
 
         Gets a list of matches for the given team and event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_event_matches(async_req=True)
+        >>> thread = api.get_team_event_matches(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Match]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_event_matches_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_event_matches_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_event_matches_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_event_matches_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_event_matches_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_event_matches_with_http_info(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_matches  # noqa: E501
 
         Gets a list of matches for the given team and event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_event_matches_with_http_info(async_req=True)
+        >>> thread = api.get_team_event_matches_with_http_info(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Match]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1218,7 +1396,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'event_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1232,14 +1410,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_matches`")  # noqa: E501
+        # verify the required parameter 'event_key' is set
+        if ('event_key' not in local_var_params or
+                local_var_params['event_key'] is None):
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_matches`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'event_key' in local_var_params:
+            path_params['event_key'] = local_var_params['event_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1268,37 +1460,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_event_matches_keys(self, **kwargs):  # noqa: E501
+    def get_team_event_matches_keys(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_matches_keys  # noqa: E501
 
         Gets a list of match keys for matches for the given team and event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_event_matches_keys(async_req=True)
+        >>> thread = api.get_team_event_matches_keys(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_event_matches_keys_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_event_matches_keys_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_event_matches_keys_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_event_matches_keys_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_event_matches_keys_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_event_matches_keys_with_http_info(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_matches_keys  # noqa: E501
 
         Gets a list of match keys for matches for the given team and event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_event_matches_keys_with_http_info(async_req=True)
+        >>> thread = api.get_team_event_matches_keys_with_http_info(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1306,7 +1504,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'event_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1320,14 +1518,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_matches_keys`")  # noqa: E501
+        # verify the required parameter 'event_key' is set
+        if ('event_key' not in local_var_params or
+                local_var_params['event_key'] is None):
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_matches_keys`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'event_key' in local_var_params:
+            path_params['event_key'] = local_var_params['event_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1356,37 +1568,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_event_matches_simple(self, **kwargs):  # noqa: E501
+    def get_team_event_matches_simple(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_matches_simple  # noqa: E501
 
         Gets a short-form list of matches for the given team and event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_event_matches_simple(async_req=True)
+        >>> thread = api.get_team_event_matches_simple(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Match]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_event_matches_simple_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_event_matches_simple_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_event_matches_simple_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_event_matches_simple_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_event_matches_simple_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_event_matches_simple_with_http_info(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_matches_simple  # noqa: E501
 
         Gets a short-form list of matches for the given team and event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_event_matches_simple_with_http_info(async_req=True)
+        >>> thread = api.get_team_event_matches_simple_with_http_info(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Match]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1394,7 +1612,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'event_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1408,14 +1626,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_matches_simple`")  # noqa: E501
+        # verify the required parameter 'event_key' is set
+        if ('event_key' not in local_var_params or
+                local_var_params['event_key'] is None):
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_matches_simple`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'event_key' in local_var_params:
+            path_params['event_key'] = local_var_params['event_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1444,37 +1676,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_event_status(self, **kwargs):  # noqa: E501
+    def get_team_event_status(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_status  # noqa: E501
 
         Gets the competition rank and status of the team at the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_event_status(async_req=True)
+        >>> thread = api.get_team_event_status(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: TeamEventStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_event_status_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_event_status_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_event_status_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_event_status_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_event_status_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_event_status_with_http_info(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_status  # noqa: E501
 
         Gets the competition rank and status of the team at the given event.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_event_status_with_http_info(async_req=True)
+        >>> thread = api.get_team_event_status_with_http_info(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str event_key: TBA Event Key, eg `2016nytr` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: TeamEventStatus
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1482,7 +1720,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'event_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1496,14 +1734,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_event_status`")  # noqa: E501
+        # verify the required parameter 'event_key' is set
+        if ('event_key' not in local_var_params or
+                local_var_params['event_key'] is None):
+            raise ApiValueError("Missing the required parameter `event_key` when calling `get_team_event_status`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'event_key' in local_var_params:
+            path_params['event_key'] = local_var_params['event_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1532,37 +1784,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_events(self, **kwargs):  # noqa: E501
+    def get_team_events(self, team_key, **kwargs):  # noqa: E501
         """get_team_events  # noqa: E501
 
         Gets a list of all events this team has competed at.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events(async_req=True)
+        >>> thread = api.get_team_events(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Event]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_events_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_events_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_events_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_events_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_events_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_events_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team_events  # noqa: E501
 
         Gets a list of all events this team has competed at.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_with_http_info(async_req=True)
+        >>> thread = api.get_team_events_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Event]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1570,7 +1826,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1584,14 +1840,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1620,37 +1884,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_events_by_year(self, **kwargs):  # noqa: E501
+    def get_team_events_by_year(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_events_by_year  # noqa: E501
 
         Gets a list of events this team has competed at in the given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_by_year(async_req=True)
+        >>> thread = api.get_team_events_by_year(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Event]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_events_by_year_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_events_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_events_by_year_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_events_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
             return data
 
-    def get_team_events_by_year_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_events_by_year_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_events_by_year  # noqa: E501
 
         Gets a list of events this team has competed at in the given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_by_year_with_http_info(async_req=True)
+        >>> thread = api.get_team_events_by_year_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Event]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1658,7 +1928,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1672,14 +1942,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_by_year`")  # noqa: E501
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_events_by_year`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1708,37 +1992,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_events_by_year_keys(self, **kwargs):  # noqa: E501
+    def get_team_events_by_year_keys(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_events_by_year_keys  # noqa: E501
 
         Gets a list of the event keys for events this team has competed at in the given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_by_year_keys(async_req=True)
+        >>> thread = api.get_team_events_by_year_keys(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_events_by_year_keys_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_events_by_year_keys_with_http_info(team_key, year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_events_by_year_keys_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_events_by_year_keys_with_http_info(team_key, year, **kwargs)  # noqa: E501
             return data
 
-    def get_team_events_by_year_keys_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_events_by_year_keys_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_events_by_year_keys  # noqa: E501
 
         Gets a list of the event keys for events this team has competed at in the given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_by_year_keys_with_http_info(async_req=True)
+        >>> thread = api.get_team_events_by_year_keys_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1746,7 +2036,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1760,14 +2050,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_by_year_keys`")  # noqa: E501
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_events_by_year_keys`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1796,37 +2100,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_events_by_year_simple(self, **kwargs):  # noqa: E501
+    def get_team_events_by_year_simple(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_events_by_year_simple  # noqa: E501
 
         Gets a short-form list of events this team has competed at in the given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_by_year_simple(async_req=True)
+        >>> thread = api.get_team_events_by_year_simple(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[EventSimple]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_events_by_year_simple_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_events_by_year_simple_with_http_info(team_key, year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_events_by_year_simple_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_events_by_year_simple_with_http_info(team_key, year, **kwargs)  # noqa: E501
             return data
 
-    def get_team_events_by_year_simple_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_events_by_year_simple_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_events_by_year_simple  # noqa: E501
 
         Gets a short-form list of events this team has competed at in the given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_by_year_simple_with_http_info(async_req=True)
+        >>> thread = api.get_team_events_by_year_simple_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[EventSimple]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1834,7 +2144,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1848,14 +2158,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_by_year_simple`")  # noqa: E501
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_events_by_year_simple`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1884,37 +2208,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_events_keys(self, **kwargs):  # noqa: E501
+    def get_team_events_keys(self, team_key, **kwargs):  # noqa: E501
         """get_team_events_keys  # noqa: E501
 
         Gets a list of the event keys for all events this team has competed at.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_keys(async_req=True)
+        >>> thread = api.get_team_events_keys(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_events_keys_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_events_keys_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_events_keys_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_events_keys_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_events_keys_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_events_keys_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team_events_keys  # noqa: E501
 
         Gets a list of the event keys for all events this team has competed at.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_keys_with_http_info(async_req=True)
+        >>> thread = api.get_team_events_keys_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1922,7 +2250,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1936,14 +2264,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_keys`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1972,37 +2308,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_events_simple(self, **kwargs):  # noqa: E501
+    def get_team_events_simple(self, team_key, **kwargs):  # noqa: E501
         """get_team_events_simple  # noqa: E501
 
         Gets a short-form list of all events this team has competed at.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_simple(async_req=True)
+        >>> thread = api.get_team_events_simple(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[EventSimple]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_events_simple_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_events_simple_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_events_simple_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_events_simple_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_events_simple_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_events_simple_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team_events_simple  # noqa: E501
 
         Gets a short-form list of all events this team has competed at.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_simple_with_http_info(async_req=True)
+        >>> thread = api.get_team_events_simple_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[EventSimple]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2010,7 +2350,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2024,14 +2364,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_simple`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2060,37 +2408,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_events_statuses_by_year(self, **kwargs):  # noqa: E501
+    def get_team_events_statuses_by_year(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_events_statuses_by_year  # noqa: E501
 
         Gets a key-value list of the event statuses for events this team has competed at in the given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_statuses_by_year(async_req=True)
+        >>> thread = api.get_team_events_statuses_by_year(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: dict(str, TeamEventStatus)
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_events_statuses_by_year_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_events_statuses_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_events_statuses_by_year_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_events_statuses_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
             return data
 
-    def get_team_events_statuses_by_year_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_events_statuses_by_year_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_events_statuses_by_year  # noqa: E501
 
         Gets a key-value list of the event statuses for events this team has competed at in the given year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_events_statuses_by_year_with_http_info(async_req=True)
+        >>> thread = api.get_team_events_statuses_by_year_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: dict(str, TeamEventStatus)
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2098,7 +2452,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2112,14 +2466,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_events_statuses_by_year`")  # noqa: E501
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_events_statuses_by_year`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2148,37 +2516,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_matches_by_year(self, **kwargs):  # noqa: E501
+    def get_team_matches_by_year(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_matches_by_year  # noqa: E501
 
         Gets a list of matches for the given team and year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_matches_by_year(async_req=True)
+        >>> thread = api.get_team_matches_by_year(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Match]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_matches_by_year_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_matches_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_matches_by_year_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_matches_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
             return data
 
-    def get_team_matches_by_year_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_matches_by_year_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_matches_by_year  # noqa: E501
 
         Gets a list of matches for the given team and year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_matches_by_year_with_http_info(async_req=True)
+        >>> thread = api.get_team_matches_by_year_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Match]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2186,7 +2560,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2200,14 +2574,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year`")  # noqa: E501
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_matches_by_year`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2236,37 +2624,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_matches_by_year_keys(self, **kwargs):  # noqa: E501
+    def get_team_matches_by_year_keys(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_matches_by_year_keys  # noqa: E501
 
         Gets a list of match keys for matches for the given team and year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_matches_by_year_keys(async_req=True)
+        >>> thread = api.get_team_matches_by_year_keys(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_matches_by_year_keys_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_matches_by_year_keys_with_http_info(team_key, year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_matches_by_year_keys_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_matches_by_year_keys_with_http_info(team_key, year, **kwargs)  # noqa: E501
             return data
 
-    def get_team_matches_by_year_keys_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_matches_by_year_keys_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_matches_by_year_keys  # noqa: E501
 
         Gets a list of match keys for matches for the given team and year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_matches_by_year_keys_with_http_info(async_req=True)
+        >>> thread = api.get_team_matches_by_year_keys_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2274,7 +2668,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2288,14 +2682,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year_keys`")  # noqa: E501
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_matches_by_year_keys`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2324,37 +2732,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_matches_by_year_simple(self, **kwargs):  # noqa: E501
+    def get_team_matches_by_year_simple(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_matches_by_year_simple  # noqa: E501
 
         Gets a short-form list of matches for the given team and year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_matches_by_year_simple(async_req=True)
+        >>> thread = api.get_team_matches_by_year_simple(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[MatchSimple]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_matches_by_year_simple_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_matches_by_year_simple_with_http_info(team_key, year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_matches_by_year_simple_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_matches_by_year_simple_with_http_info(team_key, year, **kwargs)  # noqa: E501
             return data
 
-    def get_team_matches_by_year_simple_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_matches_by_year_simple_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_matches_by_year_simple  # noqa: E501
 
         Gets a short-form list of matches for the given team and year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_matches_by_year_simple_with_http_info(async_req=True)
+        >>> thread = api.get_team_matches_by_year_simple_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[MatchSimple]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2362,7 +2776,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2376,14 +2790,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_matches_by_year_simple`")  # noqa: E501
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_matches_by_year_simple`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2412,37 +2840,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_media_by_tag(self, **kwargs):  # noqa: E501
+    def get_team_media_by_tag(self, team_key, media_tag, **kwargs):  # noqa: E501
         """get_team_media_by_tag  # noqa: E501
 
         Gets a list of Media (videos / pictures) for the given team and tag.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_media_by_tag(async_req=True)
+        >>> thread = api.get_team_media_by_tag(team_key, media_tag, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str media_tag: Media Tag which describes the Media. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Media]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_media_by_tag_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_media_by_tag_with_http_info(team_key, media_tag, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_media_by_tag_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_media_by_tag_with_http_info(team_key, media_tag, **kwargs)  # noqa: E501
             return data
 
-    def get_team_media_by_tag_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_media_by_tag_with_http_info(self, team_key, media_tag, **kwargs):  # noqa: E501
         """get_team_media_by_tag  # noqa: E501
 
         Gets a list of Media (videos / pictures) for the given team and tag.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_media_by_tag_with_http_info(async_req=True)
+        >>> thread = api.get_team_media_by_tag_with_http_info(team_key, media_tag, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str media_tag: Media Tag which describes the Media. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Media]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2450,7 +2884,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'media_tag', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2464,14 +2898,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_media_by_tag`")  # noqa: E501
+        # verify the required parameter 'media_tag' is set
+        if ('media_tag' not in local_var_params or
+                local_var_params['media_tag'] is None):
+            raise ApiValueError("Missing the required parameter `media_tag` when calling `get_team_media_by_tag`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'media_tag' in local_var_params:
+            path_params['media_tag'] = local_var_params['media_tag']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2500,37 +2948,45 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_media_by_tag_year(self, **kwargs):  # noqa: E501
+    def get_team_media_by_tag_year(self, team_key, media_tag, year, **kwargs):  # noqa: E501
         """get_team_media_by_tag_year  # noqa: E501
 
         Gets a list of Media (videos / pictures) for the given team, tag and year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_media_by_tag_year(async_req=True)
+        >>> thread = api.get_team_media_by_tag_year(team_key, media_tag, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str media_tag: Media Tag which describes the Media. (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Media]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_media_by_tag_year_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_media_by_tag_year_with_http_info(team_key, media_tag, year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_media_by_tag_year_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_media_by_tag_year_with_http_info(team_key, media_tag, year, **kwargs)  # noqa: E501
             return data
 
-    def get_team_media_by_tag_year_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_media_by_tag_year_with_http_info(self, team_key, media_tag, year, **kwargs):  # noqa: E501
         """get_team_media_by_tag_year  # noqa: E501
 
         Gets a list of Media (videos / pictures) for the given team, tag and year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_media_by_tag_year_with_http_info(async_req=True)
+        >>> thread = api.get_team_media_by_tag_year_with_http_info(team_key, media_tag, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str media_tag: Media Tag which describes the Media. (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Media]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2538,7 +2994,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'media_tag', 'year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2552,14 +3008,34 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_media_by_tag_year`")  # noqa: E501
+        # verify the required parameter 'media_tag' is set
+        if ('media_tag' not in local_var_params or
+                local_var_params['media_tag'] is None):
+            raise ApiValueError("Missing the required parameter `media_tag` when calling `get_team_media_by_tag_year`")  # noqa: E501
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_media_by_tag_year`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'media_tag' in local_var_params:
+            path_params['media_tag'] = local_var_params['media_tag']  # noqa: E501
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2588,37 +3064,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_media_by_year(self, **kwargs):  # noqa: E501
+    def get_team_media_by_year(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_media_by_year  # noqa: E501
 
         Gets a list of Media (videos / pictures) for the given team and year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_media_by_year(async_req=True)
+        >>> thread = api.get_team_media_by_year(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Media]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_media_by_year_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_media_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_media_by_year_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_media_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
             return data
 
-    def get_team_media_by_year_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_media_by_year_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_media_by_year  # noqa: E501
 
         Gets a list of Media (videos / pictures) for the given team and year.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_media_by_year_with_http_info(async_req=True)
+        >>> thread = api.get_team_media_by_year_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Media]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2626,7 +3108,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'year', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2640,14 +3122,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_media_by_year`")  # noqa: E501
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_team_media_by_year`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2676,37 +3172,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_robots(self, **kwargs):  # noqa: E501
+    def get_team_robots(self, team_key, **kwargs):  # noqa: E501
         """get_team_robots  # noqa: E501
 
         Gets a list of year and robot name pairs for each year that a robot name was provided. Will return an empty array if the team has never named a robot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_robots(async_req=True)
+        >>> thread = api.get_team_robots(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamRobot]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_robots_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_robots_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_robots_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_robots_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_robots_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_robots_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team_robots  # noqa: E501
 
         Gets a list of year and robot name pairs for each year that a robot name was provided. Will return an empty array if the team has never named a robot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_robots_with_http_info(async_req=True)
+        >>> thread = api.get_team_robots_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamRobot]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2714,7 +3214,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2728,14 +3228,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_robots`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2764,37 +3272,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_simple(self, **kwargs):  # noqa: E501
+    def get_team_simple(self, team_key, **kwargs):  # noqa: E501
         """get_team_simple  # noqa: E501
 
         Gets a `Team_Simple` object for the team referenced by the given key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_simple(async_req=True)
+        >>> thread = api.get_team_simple(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: TeamSimple
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_simple_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_simple_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_simple_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_simple_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_simple_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_simple_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team_simple  # noqa: E501
 
         Gets a `Team_Simple` object for the team referenced by the given key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_simple_with_http_info(async_req=True)
+        >>> thread = api.get_team_simple_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: TeamSimple
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2802,7 +3314,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2816,14 +3328,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_simple`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2852,37 +3372,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_social_media(self, **kwargs):  # noqa: E501
+    def get_team_social_media(self, team_key, **kwargs):  # noqa: E501
         """get_team_social_media  # noqa: E501
 
         Gets a list of Media (social media) for the given team.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_social_media(async_req=True)
+        >>> thread = api.get_team_social_media(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Media]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_social_media_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_social_media_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_social_media_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_social_media_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_social_media_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_social_media_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team_social_media  # noqa: E501
 
         Gets a list of Media (social media) for the given team.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_social_media_with_http_info(async_req=True)
+        >>> thread = api.get_team_social_media_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Media]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2890,7 +3414,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2904,14 +3428,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_social_media`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2940,37 +3472,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_team_years_participated(self, **kwargs):  # noqa: E501
+    def get_team_years_participated(self, team_key, **kwargs):  # noqa: E501
         """get_team_years_participated  # noqa: E501
 
         Gets a list of years in which the team participated in at least one competition.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_years_participated(async_req=True)
+        >>> thread = api.get_team_years_participated(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[int]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_team_years_participated_with_http_info(**kwargs)  # noqa: E501
+            return self.get_team_years_participated_with_http_info(team_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_team_years_participated_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_team_years_participated_with_http_info(team_key, **kwargs)  # noqa: E501
             return data
 
-    def get_team_years_participated_with_http_info(self, **kwargs):  # noqa: E501
+    def get_team_years_participated_with_http_info(self, team_key, **kwargs):  # noqa: E501
         """get_team_years_participated  # noqa: E501
 
         Gets a list of years in which the team participated in at least one competition.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_team_years_participated_with_http_info(async_req=True)
+        >>> thread = api.get_team_years_participated_with_http_info(team_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str team_key: TBA Team Key, eg `frc254` (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[int]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2978,7 +3514,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['team_key', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2992,14 +3528,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'team_key' is set
+        if ('team_key' not in local_var_params or
+                local_var_params['team_key'] is None):
+            raise ApiValueError("Missing the required parameter `team_key` when calling `get_team_years_participated`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'team_key' in local_var_params:
+            path_params['team_key'] = local_var_params['team_key']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3028,37 +3572,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_teams(self, **kwargs):  # noqa: E501
+    def get_teams(self, page_num, **kwargs):  # noqa: E501
         """get_teams  # noqa: E501
 
         Gets a list of `Team` objects, paginated in groups of 500.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams(async_req=True)
+        >>> thread = api.get_teams(page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Team]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_teams_with_http_info(**kwargs)  # noqa: E501
+            return self.get_teams_with_http_info(page_num, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_teams_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_teams_with_http_info(page_num, **kwargs)  # noqa: E501
             return data
 
-    def get_teams_with_http_info(self, **kwargs):  # noqa: E501
+    def get_teams_with_http_info(self, page_num, **kwargs):  # noqa: E501
         """get_teams  # noqa: E501
 
         Gets a list of `Team` objects, paginated in groups of 500.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_with_http_info(async_req=True)
+        >>> thread = api.get_teams_with_http_info(page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Team]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3066,7 +3614,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['page_num', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3080,14 +3628,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'page_num' is set
+        if ('page_num' not in local_var_params or
+                local_var_params['page_num'] is None):
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'page_num' in local_var_params:
+            path_params['page_num'] = local_var_params['page_num']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3116,37 +3672,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_teams_by_year(self, **kwargs):  # noqa: E501
+    def get_teams_by_year(self, year, page_num, **kwargs):  # noqa: E501
         """get_teams_by_year  # noqa: E501
 
         Gets a list of `Team` objects that competed in the given year, paginated in groups of 500.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_by_year(async_req=True)
+        >>> thread = api.get_teams_by_year(year, page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Team]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_teams_by_year_with_http_info(**kwargs)  # noqa: E501
+            return self.get_teams_by_year_with_http_info(year, page_num, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_teams_by_year_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_teams_by_year_with_http_info(year, page_num, **kwargs)  # noqa: E501
             return data
 
-    def get_teams_by_year_with_http_info(self, **kwargs):  # noqa: E501
+    def get_teams_by_year_with_http_info(self, year, page_num, **kwargs):  # noqa: E501
         """get_teams_by_year  # noqa: E501
 
         Gets a list of `Team` objects that competed in the given year, paginated in groups of 500.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_by_year_with_http_info(async_req=True)
+        >>> thread = api.get_teams_by_year_with_http_info(year, page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[Team]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3154,7 +3716,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['year', 'page_num', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3168,14 +3730,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_teams_by_year`")  # noqa: E501
+        # verify the required parameter 'page_num' is set
+        if ('page_num' not in local_var_params or
+                local_var_params['page_num'] is None):
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_by_year`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
+        if 'page_num' in local_var_params:
+            path_params['page_num'] = local_var_params['page_num']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3204,37 +3780,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_teams_by_year_keys(self, **kwargs):  # noqa: E501
+    def get_teams_by_year_keys(self, year, page_num, **kwargs):  # noqa: E501
         """get_teams_by_year_keys  # noqa: E501
 
         Gets a list Team Keys that competed in the given year, paginated in groups of 500.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_by_year_keys(async_req=True)
+        >>> thread = api.get_teams_by_year_keys(year, page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_teams_by_year_keys_with_http_info(**kwargs)  # noqa: E501
+            return self.get_teams_by_year_keys_with_http_info(year, page_num, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_teams_by_year_keys_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_teams_by_year_keys_with_http_info(year, page_num, **kwargs)  # noqa: E501
             return data
 
-    def get_teams_by_year_keys_with_http_info(self, **kwargs):  # noqa: E501
+    def get_teams_by_year_keys_with_http_info(self, year, page_num, **kwargs):  # noqa: E501
         """get_teams_by_year_keys  # noqa: E501
 
         Gets a list Team Keys that competed in the given year, paginated in groups of 500.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_by_year_keys_with_http_info(async_req=True)
+        >>> thread = api.get_teams_by_year_keys_with_http_info(year, page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3242,7 +3824,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['year', 'page_num', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3256,14 +3838,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_teams_by_year_keys`")  # noqa: E501
+        # verify the required parameter 'page_num' is set
+        if ('page_num' not in local_var_params or
+                local_var_params['page_num'] is None):
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_by_year_keys`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
+        if 'page_num' in local_var_params:
+            path_params['page_num'] = local_var_params['page_num']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3292,37 +3888,43 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_teams_by_year_simple(self, **kwargs):  # noqa: E501
+    def get_teams_by_year_simple(self, year, page_num, **kwargs):  # noqa: E501
         """get_teams_by_year_simple  # noqa: E501
 
         Gets a list of short form `Team_Simple` objects that competed in the given year, paginated in groups of 500.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_by_year_simple(async_req=True)
+        >>> thread = api.get_teams_by_year_simple(year, page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamSimple]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_teams_by_year_simple_with_http_info(**kwargs)  # noqa: E501
+            return self.get_teams_by_year_simple_with_http_info(year, page_num, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_teams_by_year_simple_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_teams_by_year_simple_with_http_info(year, page_num, **kwargs)  # noqa: E501
             return data
 
-    def get_teams_by_year_simple_with_http_info(self, **kwargs):  # noqa: E501
+    def get_teams_by_year_simple_with_http_info(self, year, page_num, **kwargs):  # noqa: E501
         """get_teams_by_year_simple  # noqa: E501
 
         Gets a list of short form `Team_Simple` objects that competed in the given year, paginated in groups of 500.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_by_year_simple_with_http_info(async_req=True)
+        >>> thread = api.get_teams_by_year_simple_with_http_info(year, page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int year: Competition Year (or Season). Must be 4 digits. (required)
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamSimple]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3330,7 +3932,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['year', 'page_num', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3344,14 +3946,28 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'year' is set
+        if ('year' not in local_var_params or
+                local_var_params['year'] is None):
+            raise ApiValueError("Missing the required parameter `year` when calling `get_teams_by_year_simple`")  # noqa: E501
+        # verify the required parameter 'page_num' is set
+        if ('page_num' not in local_var_params or
+                local_var_params['page_num'] is None):
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_by_year_simple`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'year' in local_var_params:
+            path_params['year'] = local_var_params['year']  # noqa: E501
+        if 'page_num' in local_var_params:
+            path_params['page_num'] = local_var_params['page_num']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3380,37 +3996,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_teams_keys(self, **kwargs):  # noqa: E501
+    def get_teams_keys(self, page_num, **kwargs):  # noqa: E501
         """get_teams_keys  # noqa: E501
 
         Gets a list of Team keys, paginated in groups of 500. (Note, each page will not have 500 teams, but will include the teams within that range of 500.)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_keys(async_req=True)
+        >>> thread = api.get_teams_keys(page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_teams_keys_with_http_info(**kwargs)  # noqa: E501
+            return self.get_teams_keys_with_http_info(page_num, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_teams_keys_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_teams_keys_with_http_info(page_num, **kwargs)  # noqa: E501
             return data
 
-    def get_teams_keys_with_http_info(self, **kwargs):  # noqa: E501
+    def get_teams_keys_with_http_info(self, page_num, **kwargs):  # noqa: E501
         """get_teams_keys  # noqa: E501
 
         Gets a list of Team keys, paginated in groups of 500. (Note, each page will not have 500 teams, but will include the teams within that range of 500.)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_keys_with_http_info(async_req=True)
+        >>> thread = api.get_teams_keys_with_http_info(page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3418,7 +4038,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['page_num', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3432,14 +4052,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'page_num' is set
+        if ('page_num' not in local_var_params or
+                local_var_params['page_num'] is None):
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_keys`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'page_num' in local_var_params:
+            path_params['page_num'] = local_var_params['page_num']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3468,37 +4096,41 @@ class TeamApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_teams_simple(self, **kwargs):  # noqa: E501
+    def get_teams_simple(self, page_num, **kwargs):  # noqa: E501
         """get_teams_simple  # noqa: E501
 
         Gets a list of short form `Team_Simple` objects, paginated in groups of 500.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_simple(async_req=True)
+        >>> thread = api.get_teams_simple(page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamSimple]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_teams_simple_with_http_info(**kwargs)  # noqa: E501
+            return self.get_teams_simple_with_http_info(page_num, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_teams_simple_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_teams_simple_with_http_info(page_num, **kwargs)  # noqa: E501
             return data
 
-    def get_teams_simple_with_http_info(self, **kwargs):  # noqa: E501
+    def get_teams_simple_with_http_info(self, page_num, **kwargs):  # noqa: E501
         """get_teams_simple  # noqa: E501
 
         Gets a list of short form `Team_Simple` objects, paginated in groups of 500.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_teams_simple_with_http_info(async_req=True)
+        >>> thread = api.get_teams_simple_with_http_info(page_num, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int page_num: Page number of results to return, zero-indexed (required)
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: list[TeamSimple]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3506,7 +4138,7 @@ class TeamApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['page_num', 'if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3520,14 +4152,22 @@ class TeamApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'page_num' is set
+        if ('page_num' not in local_var_params or
+                local_var_params['page_num'] is None):
+            raise ApiValueError("Missing the required parameter `page_num` when calling `get_teams_simple`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'page_num' in local_var_params:
+            path_params['page_num'] = local_var_params['page_num']  # noqa: E501
 
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}

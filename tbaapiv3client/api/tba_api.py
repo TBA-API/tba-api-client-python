@@ -46,6 +46,7 @@ class TBAApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: APIStatus
                  If the method is called asynchronously,
                  returns the request thread.
@@ -67,6 +68,7 @@ class TBAApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
         :return: APIStatus
                  If the method is called asynchronously,
                  returns the request thread.
@@ -74,7 +76,7 @@ class TBAApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['if_modified_since']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -96,6 +98,8 @@ class TBAApi(object):
         query_params = []
 
         header_params = {}
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
 
         form_params = []
         local_var_files = {}

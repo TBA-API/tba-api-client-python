@@ -59,9 +59,10 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.TBAApi(tbaapiv3client.ApiClient(configuration))
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_status()
+    api_response = api_instance.get_status(if_modified_since=if_modified_since)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TBAApi->get_status: %s\n" % e)
@@ -224,7 +225,6 @@ Class | Method | HTTP request | Description
  - [EventSimple](docs/EventSimple.md)
  - [Match](docs/Match.md)
  - [MatchAlliance](docs/MatchAlliance.md)
- - [MatchAlliances](docs/MatchAlliances.md)
  - [MatchScoreBreakdown2015](docs/MatchScoreBreakdown2015.md)
  - [MatchScoreBreakdown2015Alliance](docs/MatchScoreBreakdown2015Alliance.md)
  - [MatchScoreBreakdown2016](docs/MatchScoreBreakdown2016.md)
@@ -236,6 +236,7 @@ Class | Method | HTTP request | Description
  - [MatchScoreBreakdown2019](docs/MatchScoreBreakdown2019.md)
  - [MatchScoreBreakdown2019Alliance](docs/MatchScoreBreakdown2019Alliance.md)
  - [MatchSimple](docs/MatchSimple.md)
+ - [MatchSimpleAlliances](docs/MatchSimpleAlliances.md)
  - [MatchTimeseries2018](docs/MatchTimeseries2018.md)
  - [MatchVideos](docs/MatchVideos.md)
  - [Media](docs/Media.md)

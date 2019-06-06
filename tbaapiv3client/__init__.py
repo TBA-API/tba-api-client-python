@@ -59,7 +59,6 @@ from tbaapiv3client.models.event_ranking_sort_order_info import EventRankingSort
 from tbaapiv3client.models.event_simple import EventSimple
 from tbaapiv3client.models.match import Match
 from tbaapiv3client.models.match_alliance import MatchAlliance
-from tbaapiv3client.models.match_alliances import MatchAlliances
 from tbaapiv3client.models.match_score_breakdown2015 import MatchScoreBreakdown2015
 from tbaapiv3client.models.match_score_breakdown2015_alliance import MatchScoreBreakdown2015Alliance
 from tbaapiv3client.models.match_score_breakdown2016 import MatchScoreBreakdown2016
@@ -71,6 +70,7 @@ from tbaapiv3client.models.match_score_breakdown2018_alliance import MatchScoreB
 from tbaapiv3client.models.match_score_breakdown2019 import MatchScoreBreakdown2019
 from tbaapiv3client.models.match_score_breakdown2019_alliance import MatchScoreBreakdown2019Alliance
 from tbaapiv3client.models.match_simple import MatchSimple
+from tbaapiv3client.models.match_simple_alliances import MatchSimpleAlliances
 from tbaapiv3client.models.match_timeseries2018 import MatchTimeseries2018
 from tbaapiv3client.models.match_videos import MatchVideos
 from tbaapiv3client.models.media import Media
