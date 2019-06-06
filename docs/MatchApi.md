@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **get_event_match_timeseries**
-> list[str] get_event_match_timeseries(event_key, if_modified_since=if_modified_since)
+> list[str] get_event_match_timeseries()
 
 
 
@@ -43,22 +43,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_match_timeseries(event_key, if_modified_since=if_modified_since)
+    api_response = api_instance.get_event_match_timeseries()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_event_match_timeseries: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -76,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_matches**
-> list[Match] get_event_matches(event_key, if_modified_since=if_modified_since)
+> list[Match] get_event_matches()
 
 
 
@@ -99,22 +93,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_matches(event_key, if_modified_since=if_modified_since)
+    api_response = api_instance.get_event_matches()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_event_matches: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -132,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_matches_keys**
-> list[str] get_event_matches_keys(event_key, if_modified_since=if_modified_since)
+> list[str] get_event_matches_keys()
 
 
 
@@ -155,22 +143,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_matches_keys(event_key, if_modified_since=if_modified_since)
+    api_response = api_instance.get_event_matches_keys()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_event_matches_keys: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -188,7 +170,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_matches_simple**
-> list[MatchSimple] get_event_matches_simple(event_key, if_modified_since=if_modified_since)
+> list[MatchSimple] get_event_matches_simple()
 
 
 
@@ -211,22 +193,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_event_matches_simple(event_key, if_modified_since=if_modified_since)
+    api_response = api_instance.get_event_matches_simple()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_event_matches_simple: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -244,7 +220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_match**
-> Match get_match(match_key, if_modified_since=if_modified_since)
+> Match get_match()
 
 
 
@@ -267,22 +243,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_match(match_key, if_modified_since=if_modified_since)
+    api_response = api_instance.get_match()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_match: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **match_key** | **str**| TBA Match Key, eg &#x60;2016nytr_qm1&#x60; | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -300,7 +270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_match_simple**
-> MatchSimple get_match_simple(match_key, if_modified_since=if_modified_since)
+> MatchSimple get_match_simple()
 
 
 
@@ -323,22 +293,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_match_simple(match_key, if_modified_since=if_modified_since)
+    api_response = api_instance.get_match_simple()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_match_simple: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **match_key** | **str**| TBA Match Key, eg &#x60;2016nytr_qm1&#x60; | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -356,7 +320,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_match_timeseries**
-> list[object] get_match_timeseries(match_key, if_modified_since=if_modified_since)
+> list[object] get_match_timeseries()
 
 
 
@@ -379,22 +343,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_match_timeseries(match_key, if_modified_since=if_modified_since)
+    api_response = api_instance.get_match_timeseries()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_match_timeseries: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **match_key** | **str**| TBA Match Key, eg &#x60;2016nytr_qm1&#x60; | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -412,7 +370,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_event_matches**
-> list[Match] get_team_event_matches(team_key, event_key, if_modified_since=if_modified_since)
+> list[Match] get_team_event_matches()
 
 
 
@@ -435,24 +393,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_event_matches(team_key, event_key, if_modified_since=if_modified_since)
+    api_response = api_instance.get_team_event_matches()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_team_event_matches: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -470,7 +420,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_event_matches_keys**
-> list[str] get_team_event_matches_keys(team_key, event_key, if_modified_since=if_modified_since)
+> list[str] get_team_event_matches_keys()
 
 
 
@@ -493,24 +443,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_event_matches_keys(team_key, event_key, if_modified_since=if_modified_since)
+    api_response = api_instance.get_team_event_matches_keys()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_team_event_matches_keys: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -528,7 +470,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_event_matches_simple**
-> list[Match] get_team_event_matches_simple(team_key, event_key, if_modified_since=if_modified_since)
+> list[Match] get_team_event_matches_simple()
 
 
 
@@ -551,24 +493,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_event_matches_simple(team_key, event_key, if_modified_since=if_modified_since)
+    api_response = api_instance.get_team_event_matches_simple()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_team_event_matches_simple: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -586,7 +520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_matches_by_year**
-> list[Match] get_team_matches_by_year(team_key, year, if_modified_since=if_modified_since)
+> list[Match] get_team_matches_by_year()
 
 
 
@@ -609,24 +543,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-year = 56 # int | Competition Year (or Season). Must be 4 digits.
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_matches_by_year(team_key, year, if_modified_since=if_modified_since)
+    api_response = api_instance.get_team_matches_by_year()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_team_matches_by_year: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -644,7 +570,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_matches_by_year_keys**
-> list[str] get_team_matches_by_year_keys(team_key, year, if_modified_since=if_modified_since)
+> list[str] get_team_matches_by_year_keys()
 
 
 
@@ -667,24 +593,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-year = 56 # int | Competition Year (or Season). Must be 4 digits.
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_matches_by_year_keys(team_key, year, if_modified_since=if_modified_since)
+    api_response = api_instance.get_team_matches_by_year_keys()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_team_matches_by_year_keys: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -702,7 +620,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_matches_by_year_simple**
-> list[MatchSimple] get_team_matches_by_year_simple(team_key, year, if_modified_since=if_modified_since)
+> list[MatchSimple] get_team_matches_by_year_simple()
 
 
 
@@ -725,24 +643,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-year = 56 # int | Competition Year (or Season). Must be 4 digits.
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_team_matches_by_year_simple(team_key, year, if_modified_since=if_modified_since)
+    api_response = api_instance.get_team_matches_by_year_simple()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MatchApi->get_team_matches_by_year_simple: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_status**
-> APIStatus get_status(if_modified_since=if_modified_since)
+> APIStatus get_status()
 
 
 
@@ -31,20 +31,16 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = tbaapiv3client.TBAApi(tbaapiv3client.ApiClient(configuration))
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try:
-    api_response = api_instance.get_status(if_modified_since=if_modified_since)
+    api_response = api_instance.get_status()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TBAApi->get_status: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
