@@ -233,7 +233,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 3.5\n"\
-               "SDK Package Version: ".\
+               "SDK Package Version: 3.5".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
