@@ -45,19 +45,22 @@ class MatchApi(object):
         >>> thread = api.get_event_match_timeseries(event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_event_match_timeseries_with_http_info(event_key, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_event_match_timeseries_with_http_info(event_key, **kwargs)  # noqa: E501
-            return data
+        return self.get_event_match_timeseries_with_http_info(event_key, **kwargs)  # noqa: E501
 
     def get_event_match_timeseries_with_http_info(self, event_key, **kwargs):  # noqa: E501
         """get_event_match_timeseries  # noqa: E501
@@ -68,10 +71,19 @@ class MatchApi(object):
         >>> thread = api.get_event_match_timeseries_with_http_info(event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[str]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[str], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -145,19 +157,22 @@ class MatchApi(object):
         >>> thread = api.get_event_matches(event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[Match]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_event_matches_with_http_info(event_key, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_event_matches_with_http_info(event_key, **kwargs)  # noqa: E501
-            return data
+        return self.get_event_matches_with_http_info(event_key, **kwargs)  # noqa: E501
 
     def get_event_matches_with_http_info(self, event_key, **kwargs):  # noqa: E501
         """get_event_matches  # noqa: E501
@@ -168,10 +183,19 @@ class MatchApi(object):
         >>> thread = api.get_event_matches_with_http_info(event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[Match]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Match], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -245,19 +269,22 @@ class MatchApi(object):
         >>> thread = api.get_event_matches_keys(event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_event_matches_keys_with_http_info(event_key, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_event_matches_keys_with_http_info(event_key, **kwargs)  # noqa: E501
-            return data
+        return self.get_event_matches_keys_with_http_info(event_key, **kwargs)  # noqa: E501
 
     def get_event_matches_keys_with_http_info(self, event_key, **kwargs):  # noqa: E501
         """get_event_matches_keys  # noqa: E501
@@ -268,10 +295,19 @@ class MatchApi(object):
         >>> thread = api.get_event_matches_keys_with_http_info(event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[str]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[str], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -345,19 +381,22 @@ class MatchApi(object):
         >>> thread = api.get_event_matches_simple(event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[MatchSimple]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_event_matches_simple_with_http_info(event_key, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_event_matches_simple_with_http_info(event_key, **kwargs)  # noqa: E501
-            return data
+        return self.get_event_matches_simple_with_http_info(event_key, **kwargs)  # noqa: E501
 
     def get_event_matches_simple_with_http_info(self, event_key, **kwargs):  # noqa: E501
         """get_event_matches_simple  # noqa: E501
@@ -368,10 +407,19 @@ class MatchApi(object):
         >>> thread = api.get_event_matches_simple_with_http_info(event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[MatchSimple]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[MatchSimple], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -445,19 +493,22 @@ class MatchApi(object):
         >>> thread = api.get_match(match_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str match_key: TBA Match Key, eg `2016nytr_qm1` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: Match
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_match_with_http_info(match_key, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_match_with_http_info(match_key, **kwargs)  # noqa: E501
-            return data
+        return self.get_match_with_http_info(match_key, **kwargs)  # noqa: E501
 
     def get_match_with_http_info(self, match_key, **kwargs):  # noqa: E501
         """get_match  # noqa: E501
@@ -468,10 +519,19 @@ class MatchApi(object):
         >>> thread = api.get_match_with_http_info(match_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str match_key: TBA Match Key, eg `2016nytr_qm1` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: Match
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Match, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -545,19 +605,22 @@ class MatchApi(object):
         >>> thread = api.get_match_simple(match_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str match_key: TBA Match Key, eg `2016nytr_qm1` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: MatchSimple
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_match_simple_with_http_info(match_key, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_match_simple_with_http_info(match_key, **kwargs)  # noqa: E501
-            return data
+        return self.get_match_simple_with_http_info(match_key, **kwargs)  # noqa: E501
 
     def get_match_simple_with_http_info(self, match_key, **kwargs):  # noqa: E501
         """get_match_simple  # noqa: E501
@@ -568,10 +631,19 @@ class MatchApi(object):
         >>> thread = api.get_match_simple_with_http_info(match_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str match_key: TBA Match Key, eg `2016nytr_qm1` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: MatchSimple
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(MatchSimple, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -645,19 +717,22 @@ class MatchApi(object):
         >>> thread = api.get_match_timeseries(match_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str match_key: TBA Match Key, eg `2016nytr_qm1` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[object]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_match_timeseries_with_http_info(match_key, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_match_timeseries_with_http_info(match_key, **kwargs)  # noqa: E501
-            return data
+        return self.get_match_timeseries_with_http_info(match_key, **kwargs)  # noqa: E501
 
     def get_match_timeseries_with_http_info(self, match_key, **kwargs):  # noqa: E501
         """get_match_timeseries  # noqa: E501
@@ -668,10 +743,19 @@ class MatchApi(object):
         >>> thread = api.get_match_timeseries_with_http_info(match_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str match_key: TBA Match Key, eg `2016nytr_qm1` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[object]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[object], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -745,20 +829,23 @@ class MatchApi(object):
         >>> thread = api.get_team_event_matches(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[Match]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_team_event_matches_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_team_event_matches_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
-            return data
+        return self.get_team_event_matches_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
 
     def get_team_event_matches_with_http_info(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_matches  # noqa: E501
@@ -769,11 +856,20 @@ class MatchApi(object):
         >>> thread = api.get_team_event_matches_with_http_info(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[Match]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Match], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -853,20 +949,23 @@ class MatchApi(object):
         >>> thread = api.get_team_event_matches_keys(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_team_event_matches_keys_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_team_event_matches_keys_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
-            return data
+        return self.get_team_event_matches_keys_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
 
     def get_team_event_matches_keys_with_http_info(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_matches_keys  # noqa: E501
@@ -877,11 +976,20 @@ class MatchApi(object):
         >>> thread = api.get_team_event_matches_keys_with_http_info(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[str]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[str], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -961,20 +1069,23 @@ class MatchApi(object):
         >>> thread = api.get_team_event_matches_simple(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[Match]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_team_event_matches_simple_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_team_event_matches_simple_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
-            return data
+        return self.get_team_event_matches_simple_with_http_info(team_key, event_key, **kwargs)  # noqa: E501
 
     def get_team_event_matches_simple_with_http_info(self, team_key, event_key, **kwargs):  # noqa: E501
         """get_team_event_matches_simple  # noqa: E501
@@ -985,11 +1096,20 @@ class MatchApi(object):
         >>> thread = api.get_team_event_matches_simple_with_http_info(team_key, event_key, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[Match]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Match], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1069,20 +1189,23 @@ class MatchApi(object):
         >>> thread = api.get_team_matches_by_year(team_key, year, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param int year: Competition Year (or Season). Must be 4 digits. (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[Match]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_team_matches_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_team_matches_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
-            return data
+        return self.get_team_matches_by_year_with_http_info(team_key, year, **kwargs)  # noqa: E501
 
     def get_team_matches_by_year_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_matches_by_year  # noqa: E501
@@ -1093,11 +1216,20 @@ class MatchApi(object):
         >>> thread = api.get_team_matches_by_year_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param int year: Competition Year (or Season). Must be 4 digits. (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[Match]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Match], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1177,20 +1309,23 @@ class MatchApi(object):
         >>> thread = api.get_team_matches_by_year_keys(team_key, year, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param int year: Competition Year (or Season). Must be 4 digits. (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_team_matches_by_year_keys_with_http_info(team_key, year, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_team_matches_by_year_keys_with_http_info(team_key, year, **kwargs)  # noqa: E501
-            return data
+        return self.get_team_matches_by_year_keys_with_http_info(team_key, year, **kwargs)  # noqa: E501
 
     def get_team_matches_by_year_keys_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_matches_by_year_keys  # noqa: E501
@@ -1201,11 +1336,20 @@ class MatchApi(object):
         >>> thread = api.get_team_matches_by_year_keys_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param int year: Competition Year (or Season). Must be 4 digits. (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[str]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[str], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1285,20 +1429,23 @@ class MatchApi(object):
         >>> thread = api.get_team_matches_by_year_simple(team_key, year, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param int year: Competition Year (or Season). Must be 4 digits. (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: list[MatchSimple]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_team_matches_by_year_simple_with_http_info(team_key, year, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_team_matches_by_year_simple_with_http_info(team_key, year, **kwargs)  # noqa: E501
-            return data
+        return self.get_team_matches_by_year_simple_with_http_info(team_key, year, **kwargs)  # noqa: E501
 
     def get_team_matches_by_year_simple_with_http_info(self, team_key, year, **kwargs):  # noqa: E501
         """get_team_matches_by_year_simple  # noqa: E501
@@ -1309,11 +1456,20 @@ class MatchApi(object):
         >>> thread = api.get_team_matches_by_year_simple_with_http_info(team_key, year, async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str team_key: TBA Team Key, eg `frc254` (required)
         :param int year: Competition Year (or Season). Must be 4 digits. (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: list[MatchSimple]
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[MatchSimple], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """

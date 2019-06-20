@@ -45,18 +45,21 @@ class TBAApi(object):
         >>> thread = api.get_status(async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
         :return: APIStatus
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_status_with_http_info(**kwargs)  # noqa: E501
-        else:
-            (data) = self.get_status_with_http_info(**kwargs)  # noqa: E501
-            return data
+        return self.get_status_with_http_info(**kwargs)  # noqa: E501
 
     def get_status_with_http_info(self, **kwargs):  # noqa: E501
         """get_status  # noqa: E501
@@ -67,9 +70,18 @@ class TBAApi(object):
         >>> thread = api.get_status_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async_req bool: execute request asynchronously
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: APIStatus
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(APIStatus, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
