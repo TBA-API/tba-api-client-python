@@ -122,7 +122,8 @@ class Team(object):
             self.location_name = location_name
         if website is not None:
             self.website = website
-        self.rookie_year = rookie_year
+        if rookie_year is not None:
+            self.rookie_year = rookie_year
         if motto is not None:
             self.motto = motto
         if home_championship is not None:
@@ -499,8 +500,6 @@ class Team(object):
         :param rookie_year: The rookie_year of this Team.  # noqa: E501
         :type: int
         """
-        if rookie_year is None:
-            raise ValueError("Invalid value for `rookie_year`, must not be `None`")  # noqa: E501
 
         self._rookie_year = rookie_year
 

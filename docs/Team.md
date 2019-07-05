@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **lng** | **float** | Will be NULL, for future development. | [optional] 
 **location_name** | **str** | Will be NULL, for future development. | [optional] 
 **website** | **str** | Official website associated with the team. | [optional] 
-**rookie_year** | **int** | First year the team officially competed. | 
+**rookie_year** | **int** | First year the team officially competed. | [optional] 
 **motto** | **str** | Team&#39;s motto as provided by FIRST. This field is deprecated and will return null - will be removed at end-of-season in 2019. | [optional] 
 **home_championship** | [**object**](.md) | Location of the team&#39;s home championship each year as a key-value pair. The year (as a string) is the key, and the city is the value. | [optional] 
 
