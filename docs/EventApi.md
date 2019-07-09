@@ -63,7 +63,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -126,7 +128,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -189,7 +193,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 district_key = 'district_key_example' # str | TBA District Key, eg `2016fim`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -252,7 +258,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -315,7 +323,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -378,7 +388,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -441,7 +453,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -504,7 +518,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -567,7 +583,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -630,7 +648,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -693,7 +713,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -756,7 +778,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -819,7 +843,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -882,7 +908,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -945,7 +973,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -1008,7 +1038,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -1071,7 +1103,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -1134,7 +1168,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -1197,7 +1233,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -1260,7 +1298,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -1323,7 +1363,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -1386,7 +1428,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -1449,7 +1493,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -1512,7 +1558,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
@@ -1577,7 +1625,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
@@ -1642,7 +1692,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
@@ -1707,7 +1759,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
@@ -1772,7 +1826,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
@@ -1837,7 +1893,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -1900,7 +1958,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
@@ -1965,7 +2025,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
@@ -2030,7 +2092,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
@@ -2095,7 +2159,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -2158,7 +2224,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
@@ -2221,7 +2289,9 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
 
-# create an instance of the API class
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Create an instance of the API class
 api_instance = tbaapiv3client.EventApi(tbaapiv3client.ApiClient(configuration))
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
