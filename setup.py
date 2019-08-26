@@ -31,7 +31,7 @@ setup(
     url="",
     keywords=["OpenAPI", "OpenAPI-Generator", "The Blue Alliance API v3"],
     install_requires=REQUIRES,
-    packages=find_packages(),
+    packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
     long_description="""\
     # Overview    Information and statistics about FIRST Robotics Competition teams and events.   # Authentication   All endpoints require an Auth Key to be passed in the header &#x60;X-TBA-Auth-Key&#x60;. If you do not have an auth key yet, you can obtain one from your [Account Page](/account).    A &#x60;User-Agent&#x60; header may need to be set to prevent a 403 Unauthorized error.  # noqa: E501
