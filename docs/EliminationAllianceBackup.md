@@ -1,5 +1,6 @@
 # EliminationAllianceBackup
 
+Backup team called in, may be null.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

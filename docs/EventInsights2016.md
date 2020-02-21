@@ -1,5 +1,6 @@
 # EventInsights2016
 
+Insights for FIRST Stronghold qualification and elimination matches.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **team_number** | **int** | Official team number issued by FIRST. | 
 **nickname** | **str** | Team nickname provided by FIRST. | [optional] 
 **name** | **str** | Official long name registered with FIRST. | 
+**school_name** | **str** | Name of team school or affilited group registered with FIRST. | [optional] 
 **city** | **str** | City of team derived from parsing the address registered with FIRST. | [optional] 
 **state_prov** | **str** | State of team derived from parsing the address registered with FIRST. | [optional] 
 **country** | **str** | Country of team derived from parsing the address registered with FIRST. | [optional] 

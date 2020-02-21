@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**get_match**](MatchApi.md#get_match) | **GET** /match/{match_key} | 
 [**get_match_simple**](MatchApi.md#get_match_simple) | **GET** /match/{match_key}/simple | 
 [**get_match_timeseries**](MatchApi.md#get_match_timeseries) | **GET** /match/{match_key}/timeseries | 
+[**get_match_zebra**](MatchApi.md#get_match_zebra) | **GET** /match/{match_key}/zebra_motionworks | 
 [**get_team_event_matches**](MatchApi.md#get_team_event_matches) | **GET** /team/{team_key}/event/{event_key}/matches | 
 [**get_team_event_matches_keys**](MatchApi.md#get_team_event_matches_keys) | **GET** /team/{team_key}/event/{event_key}/matches/keys | 
 [**get_team_event_matches_simple**](MatchApi.md#get_team_event_matches_simple) | **GET** /team/{team_key}/event/{event_key}/matches/simple | 
@@ -43,16 +44,18 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_event_match_timeseries(event_key, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_event_match_timeseries: %s\n" % e)
+    try:
+        api_response = api_instance.get_event_match_timeseries(event_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_event_match_timeseries: %s\n" % e)
 ```
 
 ### Parameters
@@ -108,16 +111,18 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_event_matches(event_key, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_event_matches: %s\n" % e)
+    try:
+        api_response = api_instance.get_event_matches(event_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_event_matches: %s\n" % e)
 ```
 
 ### Parameters
@@ -173,16 +178,18 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_event_matches_keys(event_key, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_event_matches_keys: %s\n" % e)
+    try:
+        api_response = api_instance.get_event_matches_keys(event_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_event_matches_keys: %s\n" % e)
 ```
 
 ### Parameters
@@ -238,16 +245,18 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_event_matches_simple(event_key, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_event_matches_simple: %s\n" % e)
+    try:
+        api_response = api_instance.get_event_matches_simple(event_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_event_matches_simple: %s\n" % e)
 ```
 
 ### Parameters
@@ -303,16 +312,18 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_match(match_key, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_match: %s\n" % e)
+    try:
+        api_response = api_instance.get_match(match_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_match: %s\n" % e)
 ```
 
 ### Parameters
@@ -368,16 +379,18 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_match_simple(match_key, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_match_simple: %s\n" % e)
+    try:
+        api_response = api_instance.get_match_simple(match_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_match_simple: %s\n" % e)
 ```
 
 ### Parameters
@@ -433,16 +446,18 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_match_timeseries(match_key, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_match_timeseries: %s\n" % e)
+    try:
+        api_response = api_instance.get_match_timeseries(match_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_match_timeseries: %s\n" % e)
 ```
 
 ### Parameters
@@ -455,6 +470,73 @@ Name | Type | Description  | Notes
 ### Return type
 
 **list[object]**
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_match_zebra**
+> Zebra get_match_zebra(match_key, if_modified_since=if_modified_since)
+
+
+
+Gets Zebra MotionWorks data for a Match for the given match key.
+
+### Example
+
+* Api Key Authentication (apiKey):
+```python
+from __future__ import print_function
+import time
+import tbaapiv3client
+from tbaapiv3client.rest import ApiException
+from pprint import pprint
+configuration = tbaapiv3client.Configuration()
+# Configure API key authorization: apiKey
+configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
+
+# Defining host is optional and default to https://www.thebluealliance.com/api/v3
+configuration.host = "https://www.thebluealliance.com/api/v3"
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    match_key = 'match_key_example' # str | TBA Match Key, eg `2016nytr_qm1`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
+
+    try:
+        api_response = api_instance.get_match_zebra(match_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_match_zebra: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **match_key** | **str**| TBA Match Key, eg &#x60;2016nytr_qm1&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+
+### Return type
+
+[**Zebra**](Zebra.md)
 
 ### Authorization
 
@@ -498,17 +580,19 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_team_event_matches(team_key, event_key, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_team_event_matches: %s\n" % e)
+    try:
+        api_response = api_instance.get_team_event_matches(team_key, event_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_team_event_matches: %s\n" % e)
 ```
 
 ### Parameters
@@ -565,17 +649,19 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_team_event_matches_keys(team_key, event_key, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_team_event_matches_keys: %s\n" % e)
+    try:
+        api_response = api_instance.get_team_event_matches_keys(team_key, event_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_team_event_matches_keys: %s\n" % e)
 ```
 
 ### Parameters
@@ -632,17 +718,19 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_team_event_matches_simple(team_key, event_key, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_team_event_matches_simple: %s\n" % e)
+    try:
+        api_response = api_instance.get_team_event_matches_simple(team_key, event_key, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_team_event_matches_simple: %s\n" % e)
 ```
 
 ### Parameters
@@ -699,17 +787,19 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_team_matches_by_year(team_key, year, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_team_matches_by_year: %s\n" % e)
+    try:
+        api_response = api_instance.get_team_matches_by_year(team_key, year, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_team_matches_by_year: %s\n" % e)
 ```
 
 ### Parameters
@@ -766,17 +856,19 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_team_matches_by_year_keys(team_key, year, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_team_matches_by_year_keys: %s\n" % e)
+    try:
+        api_response = api_instance.get_team_matches_by_year_keys(team_key, year, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_team_matches_by_year_keys: %s\n" % e)
 ```
 
 ### Parameters
@@ -833,17 +925,19 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.MatchApi(tbaapiv3client.ApiClient(configuration))
-team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.MatchApi(api_client)
+    team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
 year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_team_matches_by_year_simple(team_key, year, if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MatchApi->get_team_matches_by_year_simple: %s\n" % e)
+    try:
+        api_response = api_instance.get_team_matches_by_year_simple(team_key, year, if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MatchApi->get_team_matches_by_year_simple: %s\n" % e)
 ```
 
 ### Parameters

@@ -1,5 +1,6 @@
 # TeamEventStatusPlayoff
 
+Playoff status for this team, may be null if the team did not make playoffs, or playoffs have not begun.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,6 @@
 # EventOPRs
 
+OPR, DPR, and CCWM for teams at the event.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

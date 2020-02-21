@@ -31,15 +31,17 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
-# Create an instance of the API class
-api_instance = tbaapiv3client.TBAApi(tbaapiv3client.ApiClient(configuration))
-if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
+# Enter a context with an instance of the API client
+with tbaapiv3client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tbaapiv3client.TBAApi(api_client)
+    if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
-try:
-    api_response = api_instance.get_status(if_modified_since=if_modified_since)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling TBAApi->get_status: %s\n" % e)
+    try:
+        api_response = api_instance.get_status(if_modified_since=if_modified_since)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TBAApi->get_status: %s\n" % e)
 ```
 
 ### Parameters

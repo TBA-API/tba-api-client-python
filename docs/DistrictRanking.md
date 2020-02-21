@@ -1,5 +1,6 @@
 # DistrictRanking
 
+Rank of a team in a district.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
