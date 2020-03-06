@@ -35,16 +35,18 @@ class Webcast(object):
     openapi_types = {
         'type': 'str',
         'channel': 'str',
+        'date': 'str',
         'file': 'str'
     }
 
     attribute_map = {
         'type': 'type',
         'channel': 'channel',
+        'date': 'date',
         'file': 'file'
     }
 
-    def __init__(self, type=None, channel=None, file=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, type=None, channel=None, date=None, file=None, local_vars_configuration=None):  # noqa: E501
         """Webcast - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -52,11 +54,14 @@ class Webcast(object):
 
         self._type = None
         self._channel = None
+        self._date = None
         self._file = None
         self.discriminator = None
 
         self.type = type
         self.channel = channel
+        if date is not None:
+            self.date = date
         if file is not None:
             self.file = file
 
@@ -115,6 +120,29 @@ class Webcast(object):
             raise ValueError("Invalid value for `channel`, must not be `None`")  # noqa: E501
 
         self._channel = channel
+
+    @property
+    def date(self):
+        """Gets the date of this Webcast.  # noqa: E501
+
+        The date for the webcast in `yyyy-mm-dd` format. May be null.  # noqa: E501
+
+        :return: The date of this Webcast.  # noqa: E501
+        :rtype: str
+        """
+        return self._date
+
+    @date.setter
+    def date(self, date):
+        """Sets the date of this Webcast.
+
+        The date for the webcast in `yyyy-mm-dd` format. May be null.  # noqa: E501
+
+        :param date: The date of this Webcast.  # noqa: E501
+        :type: str
+        """
+
+        self._date = date
 
     @property
     def file(self):
