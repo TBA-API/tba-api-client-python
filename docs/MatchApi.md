@@ -44,6 +44,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -111,6 +112,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -178,6 +180,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -245,6 +248,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -312,6 +316,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -379,6 +384,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -446,6 +452,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -513,6 +520,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -580,6 +588,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -649,6 +658,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -718,6 +728,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -787,6 +798,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -856,6 +868,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -925,6 +938,7 @@ configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
 
 # Defining host is optional and default to https://www.thebluealliance.com/api/v3
 configuration.host = "https://www.thebluealliance.com/api/v3"
+
 # Enter a context with an instance of the API client
 with tbaapiv3client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
